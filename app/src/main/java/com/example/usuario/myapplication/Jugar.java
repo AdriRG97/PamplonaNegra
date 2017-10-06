@@ -58,6 +58,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
 
+
     }
 
     @SuppressLint("MissingPermission")
@@ -74,6 +75,5 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
                 this.finish();
             }
         }
-
     }
 }
