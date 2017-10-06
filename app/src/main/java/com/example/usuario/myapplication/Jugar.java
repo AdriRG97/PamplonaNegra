@@ -135,6 +135,9 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
             return;
         }
 
+<<<<<<< HEAD
+
+=======
         if (PermissionUtils.isPermissionGranted(permissions, grantResults,
                 Manifest.permission.ACCESS_FINE_LOCATION)) {
             // Enable the my location layer if the permission has been granted.
@@ -143,6 +146,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
             // Display the missing permission error dialog when the fragments resume.
             mPermissionDenied = true;
         }
+>>>>>>> origin/master
     }
 
     @Override
@@ -153,6 +157,8 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
             showMissingPermissionError();
             mPermissionDenied = false;
         }
+<<<<<<< HEAD
+=======
     }
 
     /**
@@ -161,5 +167,6 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
     private void showMissingPermissionError() {
         PermissionUtils.PermissionDeniedDialog
                 .newInstance(true).show(getSupportFragmentManager(), "dialog");
+>>>>>>> origin/master
     }
 }
