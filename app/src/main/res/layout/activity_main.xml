@@ -1,56 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#000000"
     android:orientation="vertical"
     android:weightSum="1"
     tools:context="com.example.usuario.myapplication.MainActivity">
 
 
-
-
- <ImageView
-     android:id="@+id/imageView"
-     android:layout_width="418dp"
-     android:layout_height="308dp"
-     android:adjustViewBounds="false"
-     android:background="@drawable/logo"
-     android:cropToPadding="false"
-     android:visibility="visible"
-     app:srcCompat="@drawable/logo"
-     tools:layout_editor_absoluteX="-6dp"
-     tools:layout_editor_absoluteY="90dp" />
-
-
-    <Button
-        android:id="@+id/buttonInvisible"
-        android:layout_width="181dp"
-        android:layout_height="129dp"
-        android:elevation="0dp"
-        android:text=""
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="198dp"
-        tools:layout_editor_absoluteY="37dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="183dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="0dp"
-        android:text="JUGAR"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="37dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/logo"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="181dp"
-        android:layout_height="50dp"
+        android:layout_width="140dp"
+        android:layout_height="39dp"
+        android:background="@color/colorPrimaryDark"
         android:elevation="0dp"
         android:text="INFORMACIÓN"
-        tools:layout_editor_absoluteX="198dp"
-        tools:layout_editor_absoluteY="37dp" />
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="93dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.295" />
 
-</TableLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="140dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="46dp"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="0dp"
+        android:text="JUGAR"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

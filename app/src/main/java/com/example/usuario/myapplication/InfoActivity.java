@@ -20,7 +20,7 @@ public class InfoActivity extends Activity {
         setContentView(R.layout.info_activity);
         Spinner miSpinner = (Spinner) findViewById(R.id.spinner);
         String[] elemento = {"Cómo jugar","Ver nuestra web","Créditos"};
-        miSpinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, elemento));
+        miSpinner.setAdapter(new ArrayAdapter<String>(this, R.layout.spinner_items, elemento));
 
 
   miSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
