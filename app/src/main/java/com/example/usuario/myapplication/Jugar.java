@@ -82,7 +82,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         marcador = mMap.addMarker(new MarkerOptions()
                 .position(coordenadas)
                 .title("Mi posición Actual")
-                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher_round)));
         mMap.animateCamera(miUbicacion);
     }
 
