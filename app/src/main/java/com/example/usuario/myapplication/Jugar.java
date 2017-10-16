@@ -82,7 +82,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         marcador = mMap.addMarker(new MarkerOptions()
                 .position(coordenadas)
                 .title("Mi posición Actual")
-                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher_round)));
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
         mMap.animateCamera(miUbicacion);
     }
 
@@ -144,6 +144,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
             // Display the missing permission error dialog when the fragments resume.
             mPermissionDenied = true;
         }
+
     }
 
     @Override
@@ -163,5 +164,6 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
     private void showMissingPermissionError() {
         PermissionUtils.PermissionDeniedDialog
                 .newInstance(true).show(getSupportFragmentManager(), "dialog");
+
     }
 }
