@@ -1,6 +1,6 @@
 <resources>
     parent="Theme.AppCompat.Light.NoActionBar"
-    <!-- Base application theme. -->
+    <!-- Modificar el tema a gusto ( sin actionbar-> full screen.) colores etc y llamar a este xml y no a colors.xml.... -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>

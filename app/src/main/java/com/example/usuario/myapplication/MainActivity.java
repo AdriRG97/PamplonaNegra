@@ -36,6 +36,11 @@ public class MainActivity extends Activity {
 
                     @Override
                     public void onClick(View v) {
+
+
+                        //--hay que comprobar que la ubicación esta activada (no el permiso) si no da 'error' ( no error pero no funciona)
+
+
                         Intent siguiente = new Intent(MainActivity.this , Jugar.class);
                         startActivity(siguiente);
                     }
