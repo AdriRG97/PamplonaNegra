@@ -1,71 +1,155 @@
 package com.example.usuario.myapplication;
 
 import android.app.Activity;
+import android.app.ActivityGroup;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.style.BackgroundColorSpan;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
+
+import android.app.Activity;
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 public class InfoActivity extends Activity {
 
+    private WebView webViewq;
 
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info_activity);
-        Spinner miSpinner = (Spinner) findViewById(R.id.spinner);
-        String[] elemento = {"Cómo jugar","Ver nuestra web","Créditos"};
-        miSpinner.setAdapter(new ArrayAdapter<String>(this, R.layout.spinner_items, elemento));
-        final WebView webViewq = (WebView) this.findViewById(R.id.webview);
+
+        webViewq = (WebView) findViewById(R.id.webview);
+
         webViewq.setVisibility(View.INVISIBLE);
 
         webViewq.getSettings().setJavaScriptEnabled(true);
-  miSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+        // Coger la referencia desde XML layout
+        final Spinner spinner = (Spinner) findViewById(R.id.spinner);
+       final VideoView videoView = (VideoView) findViewById(R.id.videoView_video);
+
+videoView.setVisibility(VideoView.INVISIBLE);
+        // Initializing a String Array
+        String[] elementos = new String[]{"Elige", "Cómo jugar", "Ver nuestra web", "Créditos"};
+
+        final List<String> listaElementos = new ArrayList<>(Arrays.asList(elementos));
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 
-        public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id)
-        {
-//TODO: SI SELECCIONA "CÓMO JUGAR" ABRIMOS EL HTML LOCAL CON EL TUTORIAL
-            if(pos == 3){
-                adapterView.getItemAtPosition(pos);
+            public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id)
+            {
+// SI SELECCIONA "CÓMO JUGAR" ABRIMOS EL HTML LOCAL CON EL TUTORIAL TODO: FALTAN HACER EL HTML BIEN
+                if(pos == 0) {
+                    adapterView.getSelectedView().setEnabled(false);
+                }
+                if (pos != 0){
+                    Toast.makeText(adapterView.getContext(),(String) adapterView.getItemAtPosition(pos), Toast.LENGTH_SHORT).show();
+                }
+                if(pos == 1){
+  if (webViewq.getVisibility() == View.INVISIBLE){
+        webViewq.setVisibility(View.VISIBLE);
+        webViewq.getSettings().setSupportZoom(true);
+        webViewq.loadUrl("file:///android_asset/comoJugar.html");
+        adapterView.setSelection(0);
+  }
 
-                webViewq.setVisibility(View.VISIBLE);
-                webViewq.getSettings().setSupportZoom(true);
-                webViewq.loadUrl("file:///android_asset/comoJugar.html");
+                }
+                // SI SELECCIONA "VER NUESTRA WEB" ABRIMOS LA WEB TODO:FALTA LA WEB VERDADERA
+                if(pos == 2){
+                    if (webViewq.getVisibility() == View.INVISIBLE){
+                        webViewq.setVisibility(View.VISIBLE);
+                        webViewq.getSettings().setSupportZoom(true);
+                    webViewq.loadUrl("https://es.lipsum.com/");
+                    adapterView.setSelection(0);
+                }
+                }
+                //TODO: Créditos
+                if (pos == 3){
+
+                }
 
 
             }
-            //TODO: SI SELECCIONA "VER NUESTRA WEB" ABRIMOS LA WEB (PONEMOS DE PRUEBA UNA WEB CUALAQUIERA)
-            if(pos == 1){
-                adapterView.getItemAtPosition(pos);
-                webViewq.setVisibility(View.VISIBLE);
-                webViewq.getSettings().setSupportZoom(true);
-                webViewq.loadUrl("https://www.pokemon.com/es/");
 
+            //Obligatoria al parecer
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+
+
+        });
+
+        // Initializing an ArrayAdapter
+        final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, R.layout.spinner_items, listaElementos) {
+            @Override
+            public boolean isEnabled(int position) {
+                if (position == 0) {
+                    return false;
+                } else {
+                    return true;
+                }
 
             }
 
-            Toast.makeText(adapterView.getContext(),(String) adapterView.getItemAtPosition(pos), Toast.LENGTH_SHORT).show();
-        }
+            @Override
+            public View getDropDownView(int pos, View convertView, ViewGroup parent) {
+                View adapterView = super.getDropDownView(pos, convertView, parent);
+                TextView tv = (TextView) adapterView;
+                if (pos == 0) {
+                    //flor
+                    tv.setTextColor(Color.GRAY);
+                }
+                return adapterView;
+            }
 
+        };
 
-
-      public void onNothingSelected(AdapterView<?> parent)
-        {    }
-    });
-
-
+        spinnerArrayAdapter.setDropDownViewResource(R.layout.spinner_items);
+        spinner.setAdapter(spinnerArrayAdapter);
 
     }
 
 
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+            switch (keyCode) {
+                case KeyEvent.KEYCODE_BACK:
+                    if (webViewq.getVisibility() == View.VISIBLE) {
+                        webViewq.setVisibility(View.INVISIBLE);
+
+                    } else {
+                        onBackPressed();
+                    }
+                    return true;
+            }
+
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
 }
+
+
+
+
+
+
