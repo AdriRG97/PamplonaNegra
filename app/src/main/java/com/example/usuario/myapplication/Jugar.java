@@ -70,6 +70,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
         enableMyLocation();
 //        mMap.setMyLocationEnabled(true);
+
         miUbicacion();
 
     }
@@ -136,6 +137,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 15000, 0, locationListener);
         }
     }
+
 
 
     @Override
