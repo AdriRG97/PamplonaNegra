@@ -178,4 +178,6 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
                 .newInstance(true).show(getSupportFragmentManager(), "dialog");
 
     }
+
+
 }
