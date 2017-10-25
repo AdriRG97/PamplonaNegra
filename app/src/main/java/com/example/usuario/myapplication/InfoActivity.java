@@ -43,11 +43,12 @@ public class InfoActivity extends Activity {
 
         webViewq.getSettings().setJavaScriptEnabled(true);
 
+
         // Coger la referencia desde XML layout
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
-       final VideoView videoView = (VideoView) findViewById(R.id.videoView_video);
+        final VideoView videoView = (VideoView) findViewById(R.id.videoView_video);
 
-videoView.setVisibility(VideoView.INVISIBLE);
+        videoView.setVisibility(VideoView.INVISIBLE);
         // Initializing a String Array
         String[] elementos = new String[]{"Elige", "Cómo jugar", "Ver nuestra web", "Créditos"};
 
@@ -56,39 +57,41 @@ videoView.setVisibility(VideoView.INVISIBLE);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 
-            public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id)
-            {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id) {
 // SI SELECCIONA "CÓMO JUGAR" ABRIMOS EL HTML LOCAL CON EL TUTORIAL TODO: FALTAN HACER EL HTML BIEN
-                if(pos == 0) {
+                if (pos == 0) {
                     adapterView.getSelectedView().setEnabled(false);
                 }
-                if (pos != 0){
-                    Toast.makeText(adapterView.getContext(),(String) adapterView.getItemAtPosition(pos), Toast.LENGTH_SHORT).show();
+                if (pos != 0) {
+                    Toast.makeText(adapterView.getContext(), (String) adapterView.getItemAtPosition(pos), Toast.LENGTH_SHORT).show();
                 }
-                if(pos == 1){
-  if (webViewq.getVisibility() == View.INVISIBLE){
-        webViewq.setVisibility(View.VISIBLE);
-        webViewq.getSettings().setSupportZoom(true);
-        webViewq.loadUrl("file:///android_asset/comoJugar.html");
-        adapterView.setSelection(0);
-  }
+                if (pos == 1) {
+                    webViewq.loadUrl("about:blank");
+                    if (webViewq.getVisibility() == View.INVISIBLE) {
+                        webViewq.clearCache(true);
+                        webViewq.setVisibility(View.VISIBLE);
+                        webViewq.getSettings().setSupportZoom(true);
+                        webViewq.loadUrl("file:///android_asset/comoJugar.html");
+                        adapterView.setSelection(0);
+                    }
 
                 }
                 // SI SELECCIONA "VER NUESTRA WEB" ABRIMOS LA WEB TODO:FALTA LA WEB VERDADERA
-                if(pos == 2){
-                    if (webViewq.getVisibility() == View.INVISIBLE){
+                if (pos == 2) {
+                    webViewq.loadUrl("about:blank");
+                    if (webViewq.getVisibility() == View.INVISIBLE) {
                         webViewq.setVisibility(View.VISIBLE);
+                        webViewq.loadUrl("https://es.lipsum.com/");
                         webViewq.getSettings().setSupportZoom(true);
-                    webViewq.loadUrl("https://es.lipsum.com/");
-                    adapterView.setSelection(0);
-                }
+                        adapterView.setSelection(0);
+                    }
                 }
                 //TODO: Créditos
-                if (pos == 3){
+                if (pos == 3) {
+
+                    webViewq.loadUrl("about:blank");
 
                 }
-
-
             }
 
             //Obligatoria al parecer
@@ -135,7 +138,6 @@ videoView.setVisibility(VideoView.INVISIBLE);
                 case KeyEvent.KEYCODE_BACK:
                     if (webViewq.getVisibility() == View.VISIBLE) {
                         webViewq.setVisibility(View.INVISIBLE);
-
                     } else {
                         onBackPressed();
                     }
