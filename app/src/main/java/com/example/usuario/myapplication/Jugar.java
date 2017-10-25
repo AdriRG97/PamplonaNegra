@@ -70,8 +70,12 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
         enableMyLocation();
 //        mMap.setMyLocationEnabled(true);
-
-        miUbicacion();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        actualizarUbicacion(miUbicacion());
 
     }
 
@@ -80,9 +84,11 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
                 != PackageManager.PERMISSION_GRANTED) {
             // Permission to access the location is missing.
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
+
         } else if (mMap != null) {
             // Access to the location has been granted to the app.
             mMap.setMyLocationEnabled(true);
+
         }
     }
 
@@ -109,6 +115,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         @Override
         public void onLocationChanged(Location location) {
             actualizarUbicacion(location);
+
         }
 
         @Override
@@ -127,7 +134,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         }
     };
 
-    private void miUbicacion() {
+    private Location miUbicacion() {
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
@@ -135,7 +142,9 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
             Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             actualizarUbicacion(location);
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 15000, 0, locationListener);
+            return location;
         }
+        return null;
     }
 
 
