@@ -70,11 +70,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
         enableMyLocation();
 //        mMap.setMyLocationEnabled(true);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
         actualizarUbicacion(miUbicacion());
 
     }
@@ -88,7 +84,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         } else if (mMap != null) {
             // Access to the location has been granted to the app.
             mMap.setMyLocationEnabled(true);
-
+            actualizarUbicacion(miUbicacion());
         }
     }
 
