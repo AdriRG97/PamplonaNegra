@@ -1,11 +1,8 @@
 package com.example.usuario.myapplication;
 
 import android.app.Activity;
-import android.app.ActivityGroup;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.style.BackgroundColorSpan;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,16 +12,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
-import android.app.Activity;
-import android.net.Uri;
-import android.os.Bundle;
-import android.widget.MediaController;
 import android.widget.VideoView;
 
 public class InfoActivity extends Activity {
@@ -69,9 +60,11 @@ public class InfoActivity extends Activity {
                     webViewq.loadUrl("about:blank");
                     if (webViewq.getVisibility() == View.INVISIBLE) {
                         webViewq.clearCache(true);
+                        webViewq.setInitialScale(175);
                         webViewq.setVisibility(View.VISIBLE);
-                        webViewq.getSettings().setSupportZoom(true);
                         webViewq.loadUrl("file:///android_asset/comoJugar.html");
+                        webViewq.getSettings().setBuiltInZoomControls(true);
+                        webViewq.getSettings().setDisplayZoomControls(false);
                         adapterView.setSelection(0);
                     }
 
@@ -82,7 +75,9 @@ public class InfoActivity extends Activity {
                     if (webViewq.getVisibility() == View.INVISIBLE) {
                         webViewq.setVisibility(View.VISIBLE);
                         webViewq.loadUrl("https://es.lipsum.com/");
-                        webViewq.getSettings().setSupportZoom(true);
+                        webViewq.getSettings().setBuiltInZoomControls(true);
+                        webViewq.getSettings().setDisplayZoomControls(false);
+
                         adapterView.setSelection(0);
                     }
                 }
@@ -90,7 +85,7 @@ public class InfoActivity extends Activity {
                 if (pos == 3) {
 
                     webViewq.loadUrl("about:blank");
-
+                    adapterView.setSelection(0);
                 }
             }
 
