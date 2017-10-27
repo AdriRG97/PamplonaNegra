@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class Pista2Activity extends Activity {
     VideoView videoView;
      TextView pistaTexto;
-    int pista=0;
+    public int pista=0;
 
 
 
@@ -53,11 +53,11 @@ public class Pista2Activity extends Activity {
             BufferedReader brin =
                     new BufferedReader(new InputStreamReader(fraw));
             //hay que poner un condicional y una lectura de el fichero/BBDD donde tengamos almacenada la puntuación y segun el número de pista en el que esté muestre una u otra
-            do{
+            for (int i = 0; i < 5; i++){
                 linea = brin.readLine();
                 lineas.add(linea.split("//")[1]);
-            }while (linea!="");
-            fraw.close();
+            }
+
         }
         catch (Exception ex)
         {
@@ -85,9 +85,4 @@ private void OcultarVideo(){
     videoView.setVisibility(View.INVISIBLE);
 }
 
-
-
-//    public  void PlayVideo(View view){
-//
-//    }
 }
