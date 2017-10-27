@@ -4,6 +4,9 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.LevelListDrawable;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -12,6 +15,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -24,6 +28,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 
 public class Jugar extends FragmentActivity implements OnMapReadyCallback {
 
@@ -35,11 +43,8 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
     private boolean mPermissionDenied = false;
 
 
-
-
-
-    public void AbrirPista(View view){
-        Intent irAPista = new Intent(getApplicationContext() , Pista2Activity.class);
+    public void AbrirPista(View view) {
+        Intent irAPista = new Intent(getApplicationContext(), Pista2Activity.class);
         startActivity(irAPista);
     }
 
@@ -72,6 +77,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
 //        mMap.setMyLocationEnabled(true);
 
         actualizarUbicacion(miUbicacion());
+        agregarMarcador(saberSitio().latitude, saberSitio().longitude);
 
     }
 
@@ -94,8 +100,9 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         if (marcador != null) marcador.remove();
         marcador = mMap.addMarker(new MarkerOptions()
                 .position(coordenadas)
-                .title("Mi posición Actual")
-                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.monigote)));
+                .title("Mi posición Actual"));
+        //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ekis)));
+
         mMap.animateCamera(miUbicacion);
     }
 
@@ -105,6 +112,34 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
             lng = location.getLongitude();
             agregarMarcador(lat, lng);
         }
+    }
+
+
+    private LatLng saberSitio() {
+        int pista = 4;
+        String linea;
+        String[] sitio = new String[0];
+        LatLng[] lugares= new LatLng[5];
+
+        try {
+
+            InputStream fraw =
+                    getResources().openRawResource(R.raw.sitios);
+
+            BufferedReader brin =
+                    new BufferedReader(new InputStreamReader(fraw));
+//hacer un array y meter las pistas en un array para poder saber en k pista vamos
+            for (int i = 0; i < 5; i++){
+                linea = brin.readLine();
+                sitio = ((linea.split("//")[1]).split(","));
+                lugares[i]=new LatLng(Double.parseDouble(sitio[0]), Double.parseDouble(sitio[1]));
+            }
+            fraw.close();
+        } catch (Exception ex) {
+            Log.e("Ficheros", "Error al leer fichero desde recurso raw");
+        }
+       // LatLng lugar = new LatLng(Double.parseDouble(sitio[0]), Double.parseDouble(sitio[1]));
+        return lugares[pista];
     }
 
     LocationListener locationListener = new LocationListener() {
@@ -142,7 +177,6 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         }
         return null;
     }
-
 
 
     @Override
