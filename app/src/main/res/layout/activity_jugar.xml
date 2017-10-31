@@ -52,6 +52,7 @@
             android:layout_marginTop="93dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="AbrirInformacion"
             android:text="AYUDA" />
 
         <Button
