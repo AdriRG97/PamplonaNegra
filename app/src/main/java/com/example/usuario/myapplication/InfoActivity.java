@@ -83,7 +83,6 @@ public class InfoActivity extends Activity {
                 }
                 //TODO: Créditos
                 if (pos == 3) {
-
                     webViewq.loadUrl("about:blank");
                     adapterView.setSelection(0);
                 }
@@ -113,9 +112,9 @@ public class InfoActivity extends Activity {
                 View adapterView = super.getDropDownView(pos, convertView, parent);
                 TextView tv = (TextView) adapterView;
                 if (pos == 0) {
-                    //flor
                     tv.setTextColor(Color.GRAY);
                 }
+                    //flor
                 return adapterView;
             }
 
