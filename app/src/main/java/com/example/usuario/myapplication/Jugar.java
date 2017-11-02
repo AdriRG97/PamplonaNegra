@@ -165,13 +165,14 @@ public int ConocerPista(){
            sitio.setLongitude(saberSitio().longitude);
 
 
-            if (miUbicacion().distanceTo(sitio)< 5){
+            if (miUbicacion().distanceTo(sitio)< 50){
                 //TOAST para avisar de que estas cerca y permitir introducir una respuesta
                 editor.putInt("avance", 1);
                 Toast.makeText(Jugar.this, "Ahora puedes intentar resolver el enigma", Toast.LENGTH_SHORT).show();
 
+//esto da mucho error peta la aplicacion la cierra y toda la poya
 
-                AlertDialog alertita =  new AlertDialog.Builder(getApplicationContext())
+              /*  AlertDialog alertita =  new AlertDialog.Builder(getApplicationContext())
                         .setMessage(R.string.alertita)
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
@@ -182,7 +183,7 @@ public int ConocerPista(){
                         })
                         .setNegativeButton(android.R.string.cancel, null)
                         .create();
-                alertita.show();
+                alertita.show();*/
 
             }
 
