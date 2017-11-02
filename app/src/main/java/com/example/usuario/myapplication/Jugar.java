@@ -1,7 +1,9 @@
 package com.example.usuario.myapplication;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -15,6 +17,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -36,11 +39,11 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
     private Marker marcador;
     double lat = 0.0;
     double lng = 0.0;
+    int pista;
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private boolean mPermissionDenied = false;
-    public SharedPreferences prefs =
-            getSharedPreferences("pistas", Context.MODE_PRIVATE);
-
 
     public void AbrirPista(View view) {
         Intent irAPista = new Intent(getApplicationContext(), Pista2Activity.class);
@@ -49,19 +52,26 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jugar);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt("pista", 0);
-        editor.commit();
-
-
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+                // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-    }
 
+         prefs =  getSharedPreferences("pistas", Context.MODE_PRIVATE);
+        editor = prefs.edit();
+
+        editor.putInt("avance", 0);
+    }
+public int ConocerPista(){
+        pista =prefs.getInt("pista", 0);
+        return pista;
+}
 
     /**
      * Manipulates the map once available.
@@ -73,6 +83,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
      * installed Google Play services and returned to the app.
      */
     @Override
+
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         enableMyLocation();
@@ -119,7 +130,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
 
 
     private LatLng saberSitio() {
-        int pista = prefs.getInt("pista", 0);
+       ConocerPista();
         String linea;
         String[] sitio = new String[0];
         LatLng[] lugares= new LatLng[5];
@@ -152,8 +163,26 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
            Location sitio = new Location("");
            sitio.setLatitude(saberSitio().latitude);
            sitio.setLongitude(saberSitio().longitude);
+
+
             if (miUbicacion().distanceTo(sitio)< 5){
                 //TOAST para avisar de que estas cerca y permitir introducir una respuesta
+                editor.putInt("avance", 1);
+                Toast.makeText(Jugar.this, "Ahora puedes intentar resolver el enigma", Toast.LENGTH_SHORT).show();
+
+
+                AlertDialog alertita =  new AlertDialog.Builder(getApplicationContext())
+                        .setMessage(R.string.alertita)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // After click on Ok, request the permission.
+
+                            }
+                        })
+                        .setNegativeButton(android.R.string.cancel, null)
+                        .create();
+                alertita.show();
 
             }
 
@@ -183,6 +212,14 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
             Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             actualizarUbicacion(location);
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 15000, 0, locationListener);
+
+
+            //para que la ubicación coincida con el sitio de la proxima pista
+           // Location sitioaux = new Location("");
+            //sitioaux.setLatitude(saberSitio().latitude);
+            //sitioaux.setLongitude(saberSitio().longitude);
+
+           // return sitioaux;
             return location;
         }
         return null;
