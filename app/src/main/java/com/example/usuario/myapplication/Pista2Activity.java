@@ -1,12 +1,11 @@
 package com.example.usuario.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -15,6 +14,13 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
+class CustomController extends MediaController {
+    public CustomController(Context context, View anchor) {
+        super(context);
+        super.setAnchorView(anchor);
+    }
+}
 
 public class Pista2Activity extends Activity {
     VideoView videoView;
@@ -70,10 +76,12 @@ public class Pista2Activity extends Activity {
 private void MostrarVideo(){
 
 videoView.setVisibility(View.VISIBLE);
-    Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/"+R.raw.intromono);
+    Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.resu);
     videoView.setVideoURI(directorio);
 
     MediaController mc = new MediaController(this);
+    mc.setAnchorView(videoView);
+    mc.setMediaPlayer(videoView);
     videoView.setMediaController(mc);
     videoView.start();
 }
