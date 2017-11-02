@@ -84,5 +84,11 @@ private int SaberPista(){
 private void OcultarVideo(){
     videoView.setVisibility(View.INVISIBLE);
 }
-
+private void actualizarPista(){
+    //Si responde correctamente a la pista actualizar pista a una mas
+    int numPista= getSharedPreferences("pistas",).getInt("pista", 0);
+    if(true){
+        Jugar.pref.putInt("pista", );
+    }
+}
 }

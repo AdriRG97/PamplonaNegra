@@ -3,6 +3,7 @@ package com.example.usuario.myapplication;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -41,6 +42,8 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
     double lng = 0.0;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private boolean mPermissionDenied = false;
+    public SharedPreferences prefs =
+            getSharedPreferences("pistas", Context.MODE_PRIVATE);
 
 
     public void AbrirPista(View view) {
@@ -52,6 +55,9 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jugar);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("pista", 0);
+        editor.commit();
 
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -116,7 +122,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
 
 
     private LatLng saberSitio() {
-        int pista = 4;
+        int pista = prefs.getInt("pista", 0);
         String linea;
         String[] sitio = new String[0];
         LatLng[] lugares= new LatLng[5];
@@ -146,6 +152,13 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         @Override
         public void onLocationChanged(Location location) {
             actualizarUbicacion(location);
+           Location sitio = new Location("");
+           sitio.setLatitude(saberSitio().latitude);
+           sitio.setLongitude(saberSitio().longitude);
+            if (miUbicacion().distanceTo(sitio)< 5){
+                //TOAST para avisar de que estas cerca y permitir introducir una respuesta
+
+            }
 
         }
 
