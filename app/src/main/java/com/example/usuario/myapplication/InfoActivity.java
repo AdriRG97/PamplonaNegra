@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,11 +23,15 @@ public class InfoActivity extends Activity {
 
     private WebView webViewq;
 
+    private ImageView miImagen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info_activity);
+
+        miImagen = (ImageView) findViewById(R.id.creditos);
 
         webViewq = (WebView) findViewById(R.id.webview);
 
@@ -84,6 +89,7 @@ public class InfoActivity extends Activity {
                 //TODO: Créditos
                 if (pos == 3) {
                     webViewq.loadUrl("about:blank");
+                    miImagen.setVisibility(View.VISIBLE);
                     adapterView.setSelection(0);
                 }
             }
@@ -114,7 +120,7 @@ public class InfoActivity extends Activity {
                 if (pos == 0) {
                     tv.setTextColor(Color.GRAY);
                 }
-                    //flor
+                //flor
                 return adapterView;
             }
 
@@ -125,22 +131,28 @@ public class InfoActivity extends Activity {
 
     }
 
-
+//TODO
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
             switch (keyCode) {
                 case KeyEvent.KEYCODE_BACK:
+
                     if (webViewq.getVisibility() == View.VISIBLE) {
                         webViewq.setVisibility(View.INVISIBLE);
-                    } else {
+
+                    } else if (miImagen.getVisibility() == View.VISIBLE) {
+                        miImagen.setVisibility(View.INVISIBLE);
+
+                    }else{
                         onBackPressed();
                     }
-                    return true;
-            }
 
+            }            return true;
         }
-        return super.onKeyDown(keyCode, event);
-    }
+
+            return super.onKeyDown(keyCode, event);
+        }
+
 
 }
 
