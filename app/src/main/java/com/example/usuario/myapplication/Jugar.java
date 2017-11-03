@@ -50,6 +50,11 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         startActivity(irAPista);
     }
 
+    public  void AbrirInformacion(View view){
+        Intent irAINF = new Intent(getApplicationContext(), InfoActivity.class);
+        startActivity(irAINF);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -67,6 +72,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         editor = prefs.edit();
 
         editor.putInt("avance", 0);
+        editor.commit();
     }
 public int ConocerPista(){
         pista =prefs.getInt("pista", 0);
@@ -165,12 +171,12 @@ public int ConocerPista(){
            sitio.setLongitude(saberSitio().longitude);
 
 
-            if (miUbicacion().distanceTo(sitio)< 50){
+            if (miUbicacion().distanceTo(sitio)< 10){
                 //TOAST para avisar de que estas cerca y permitir introducir una respuesta
                 editor.putInt("avance", 1);
                 Toast.makeText(Jugar.this, "Ahora puedes intentar resolver el enigma", Toast.LENGTH_SHORT).show();
 
-//esto da mucho error peta la aplicacion la cierra y toda la poya
+                //esto da mucho error peta la aplicacion la cierra y toda la poya
 
               /*  AlertDialog alertita =  new AlertDialog.Builder(getApplicationContext())
                         .setMessage(R.string.alertita)

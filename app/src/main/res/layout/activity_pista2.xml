@@ -29,8 +29,8 @@
 
     <TextView
         android:id="@+id/txtPista"
-        android:layout_width="326dp"
-        android:layout_height="134dp"
+        android:layout_width="310dp"
+        android:layout_height="133dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -38,14 +38,15 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/videoAnchor"
-        app:layout_constraintVertical_bias="0.089999974" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/textoPista"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="215dp"
+        android:layout_height="79dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -53,7 +54,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
