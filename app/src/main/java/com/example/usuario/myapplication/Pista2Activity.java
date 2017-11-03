@@ -46,11 +46,17 @@ prefs =  getSharedPreferences("pistas", Context.MODE_PRIVATE);
         }else{
         OcultarVideo();//rompe y para la aplicación
         }
-
+if(SaberAvance()<0){
+            //hacer un view que sea el texto y ponerlo visible
+}
         EscribirPista();
 
 
 
+    }
+    private int SaberAvance(){
+        int avance = prefs.getInt("avance", 0);
+        return avance;
     }
 
     private void CambiarPista(){
