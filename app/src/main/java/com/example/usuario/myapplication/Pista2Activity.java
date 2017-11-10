@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import java.io.BufferedReader;
@@ -42,7 +43,7 @@ public class Pista2Activity extends Activity {
         texto = (EditText)findViewById(R.id.textoPista);
 prefs =  getSharedPreferences("pistas", Context.MODE_PRIVATE);
         //falta otro metodo que lo primero identifique la pista para comprovar que debe haber un VideoView
-
+        pista = SaberPista();
         if(SaberPista()==0 || SaberPista()==4){
             MostrarVideo();//aqui falta un condiciona que ponga el video SOLO en las pistas que tienen que tener video
         }else{
@@ -59,16 +60,17 @@ prefs =  getSharedPreferences("pistas", Context.MODE_PRIVATE);
         return avance;
     }
 private void OcultarTexto(){
-        if(SaberAvance()>0){
+        //puesto para poder resolver pista sin estar en los lugares.
+       // if(SaberAvance()>0){
             //hacer un view que sea el texto y ponerlo visible
 
             texto.setVisibility(View.VISIBLE);
             //metodo de resolucion d pista que deje todo como debe estar
 
-        }else{
-            texto.setVisibility(View.INVISIBLE);
+      //  }else{
+       //    texto.setVisibility(View.INVISIBLE);
 
-        }
+      //  }
     }
     private void CambiarPista(){
         int pistaAux= prefs.getInt("pista", 0);
@@ -80,9 +82,57 @@ private void OcultarTexto(){
 
             editor.putInt("pista", pistaAux+1);
             editor.commit();
+            pista = prefs.getInt("pista", 0);
         }
 
 
+    }
+    private  boolean SolucionCorrecta(){
+//falta comprobar en mayus minus con acentos sin acentos y que sea exactamente o no
+        if(texto.getText().toString().equals( SaberSolucion())){
+            Toast.makeText(this, "Has Acertadum!", Toast.LENGTH_SHORT).show();
+            return true;
+        }else{
+            Toast.makeText(this, "Has fallado", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+
+
+
+    }
+    public void SeguirAvance(View view){
+        if(SolucionCorrecta()){
+        CambiarPista();
+            Toast.makeText(this, "hola mundo", Toast.LENGTH_SHORT).show();
+        this.finish();
+        }
+    }
+    private String SaberSolucion(){
+        String solucion;
+        int numPista = SaberPista();
+        ArrayList<String> soluciones = new ArrayList<String>();
+        try
+        {
+            InputStream fraw =
+                    getResources().openRawResource(R.raw.soluciones);
+
+            BufferedReader brin =
+                    new BufferedReader(new InputStreamReader(fraw));
+
+            for (int i = 0; i < 5; i++){
+                solucion = brin.readLine();
+                soluciones.add(solucion.split("-")[1]);
+            }
+
+        }
+        catch (Exception ex)
+        {
+            Log.e("Ficheros", "Error al leer fichero desde recurso raw");
+        }
+
+
+        return soluciones.get(numPista);
     }
     private void EscribirPista(){
         String linea;
