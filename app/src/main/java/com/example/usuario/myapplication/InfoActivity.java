@@ -52,7 +52,6 @@ public class InfoActivity extends Activity {
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-
             public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id) {
 // SI SELECCIONA "CÓMO JUGAR" ABRIMOS EL HTML LOCAL CON EL TUTORIAL TODO: FALTAN HACER EL HTML BIEN
                 if (pos == 0) {

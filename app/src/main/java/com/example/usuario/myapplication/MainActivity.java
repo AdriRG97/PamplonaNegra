@@ -12,7 +12,7 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 
 
-    Button siguiente, next;
+    Button siguiente, next, conf;
 
             protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
@@ -46,6 +46,19 @@ public class MainActivity extends Activity {
                         startActivity(siguiente);
                     }
                 });
+
+                conf = (Button)findViewById(R.id.btnAjustes);
+                conf.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        Intent conf = new Intent(MainActivity.this , Configuraciones.class);
+                        startActivity(conf);
+                    }
+                });
+
+
+
         }
 
 

@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -29,7 +30,7 @@ public class Pista2Activity extends Activity {
     public int pista;
     SharedPreferences.Editor editor;
     public SharedPreferences prefs;
-
+    EditText texto;
 
 
 
@@ -38,6 +39,7 @@ public class Pista2Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pista2);
         videoView= (VideoView) findViewById(R.id.videoPrueba);
+        texto = (EditText)findViewById(R.id.textoPista);
 prefs =  getSharedPreferences("pistas", Context.MODE_PRIVATE);
         //falta otro metodo que lo primero identifique la pista para comprovar que debe haber un VideoView
 
@@ -46,10 +48,8 @@ prefs =  getSharedPreferences("pistas", Context.MODE_PRIVATE);
         }else{
         OcultarVideo();//rompe y para la aplicación
         }
-if(SaberAvance()<0){
-            //hacer un view que sea el texto y ponerlo visible
-}
-        EscribirPista();
+         OcultarTexto();
+            EscribirPista();
 
 
 
@@ -58,7 +58,18 @@ if(SaberAvance()<0){
         int avance = prefs.getInt("avance", 0);
         return avance;
     }
+private void OcultarTexto(){
+        if(SaberAvance()>0){
+            //hacer un view que sea el texto y ponerlo visible
 
+            texto.setVisibility(View.VISIBLE);
+            //metodo de resolucion d pista que deje todo como debe estar
+
+        }else{
+            texto.setVisibility(View.INVISIBLE);
+
+        }
+    }
     private void CambiarPista(){
         int pistaAux= prefs.getInt("pista", 0);
     editor = prefs.edit();
