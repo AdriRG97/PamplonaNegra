@@ -23,6 +23,7 @@ import java.util.ArrayList;
 public class Pista2Activity extends Activity {
     VideoView videoView;
     TextView pistaTexto;
+
     public int pista;
     SharedPreferences.Editor editor;
     public SharedPreferences prefs;
@@ -87,10 +88,10 @@ public class Pista2Activity extends Activity {
     private boolean SolucionCorrecta() {
 //falta comprobar en mayus minus con acentos sin acentos y que sea exactamente o no
         if (texto.getText().toString().equals(SaberSolucion())) {
-            Toast.makeText(this, "Has Acertadum!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.acierto, Toast.LENGTH_SHORT).show();
             return true;
         } else {
-            Toast.makeText(this, "Has fallado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.fallo, Toast.LENGTH_SHORT).show();
             return false;
         }
 
@@ -100,7 +101,7 @@ public class Pista2Activity extends Activity {
     public void SeguirAvance(View view) {
         if (SolucionCorrecta()) {
             CambiarPista();
-            Toast.makeText(this, "hola mundo", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.seguirAvance, Toast.LENGTH_SHORT).show();
             onBackPressed();
         }
     }
@@ -108,7 +109,7 @@ public class Pista2Activity extends Activity {
     private String SaberSolucion() {
         String solucion;
         int numPista = SaberPista();
-        ArrayList<String> soluciones = new ArrayList<String>();
+        ArrayList<String> soluciones = new ArrayList<>();
         try {
             InputStream fraw =
                     getResources().openRawResource(R.raw.soluciones);

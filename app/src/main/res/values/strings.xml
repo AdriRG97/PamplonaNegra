@@ -9,5 +9,7 @@
     <string name="informaci_n">Información</string>
     <string name="alertita">¡Cuidado!, estás cerca de resolver el enigma</string>
     <string name="title_activity_configuraciones">Configuraciones</string>
-
+    <string name="acierto">Has Acertadum!</string>
+    <string name="fallo">Has fallado</string>
+    <string name="seguirAvance">Puedes continuar con la siguiente pisa</string>
 </resources>
