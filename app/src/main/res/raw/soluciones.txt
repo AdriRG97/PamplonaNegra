@@ -1,4 +1,4 @@
-1-distinta/otra
+1-distinta%otra
 2-
 3-1/1
 4- 204862
