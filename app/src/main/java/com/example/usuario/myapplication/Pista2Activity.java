@@ -18,141 +18,134 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-class CustomController extends MediaController {
-    public CustomController(Context context, View anchor) {
-        super(context);
-        super.setAnchorView(anchor);
-    }
-}
+
 
 public class Pista2Activity extends Activity {
     VideoView videoView;
-     TextView pistaTexto;
+    TextView pistaTexto;
+
     public int pista;
     SharedPreferences.Editor editor;
     public SharedPreferences prefs;
     EditText texto;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pista2);
-        videoView= (VideoView) findViewById(R.id.videoPrueba);
-        texto = (EditText)findViewById(R.id.textoPista);
-prefs =  getSharedPreferences("pistas", Context.MODE_PRIVATE);
-        //falta otro metodo que lo primero identifique la pista para comprovar que debe haber un VideoView
-        pista = SaberPista();
-        if(SaberPista()==0 || SaberPista()==4){
-            MostrarVideo();//aqui falta un condiciona que ponga el video SOLO en las pistas que tienen que tener video
-        }else{
-        OcultarVideo();//rompe y para la aplicación
-        }
-         OcultarTexto();
-            EscribirPista();
+        videoView = (VideoView) findViewById(R.id.videoPrueba);
+        texto = (EditText) findViewById(R.id.textoPista);
+        prefs = getSharedPreferences("pistas", Context.MODE_PRIVATE);
 
+        pista = SaberPista();
+        if (SaberPista() == 0 || SaberPista() == 4) {
+            MostrarVideo();
+        } else {
+            OcultarVideo();
+        }
+        OcultarTexto();
+        EscribirPista();
 
 
     }
-    private int SaberAvance(){
+
+    private int SaberAvance() {
         int avance = prefs.getInt("avance", 0);
         return avance;
     }
-private void OcultarTexto(){
-        //puesto para poder resolver pista sin estar en los lugares.
-       // if(SaberAvance()>0){
-            //hacer un view que sea el texto y ponerlo visible
 
-            texto.setVisibility(View.VISIBLE);
-            //metodo de resolucion d pista que deje todo como debe estar
+    private void OcultarTexto() {
+        //lo he puesto para poder resolver pista sin estar en los lugares.
+        // if(SaberAvance()>0){
 
-      //  }else{
-       //    texto.setVisibility(View.INVISIBLE);
 
-      //  }
+        texto.setVisibility(View.VISIBLE);
+
+
+        //  }else{
+        //    texto.setVisibility(View.INVISIBLE);
+
+        //  }
     }
-    private void CambiarPista(){
-        int pistaAux= prefs.getInt("pista", 0);
-    editor = prefs.edit();
-        if(pistaAux==0){
-            editor.putInt("pista",0);
-            editor.commit();
-        }else{
 
-            editor.putInt("pista", pistaAux+1);
+    private void CambiarPista() {
+        int pistaAux = prefs.getInt("pista", 0);
+        editor = prefs.edit();
+        if (pistaAux == 0) {
+            editor.putInt("pista", 1);
+            editor.commit();
+        } else {
+
+            editor.putInt("pista", pistaAux + 1);
             editor.commit();
             pista = prefs.getInt("pista", 0);
         }
 
 
     }
-    private  boolean SolucionCorrecta(){
+
+    private boolean SolucionCorrecta() {
 //falta comprobar en mayus minus con acentos sin acentos y que sea exactamente o no
-        if(texto.getText().toString().equals( SaberSolucion())){
-            Toast.makeText(this, "Has Acertadum!", Toast.LENGTH_SHORT).show();
+        if (texto.getText().toString().equals(SaberSolucion())) {
+            Toast.makeText(this, R.string.acierto, Toast.LENGTH_SHORT).show();
             return true;
-        }else{
-            Toast.makeText(this, "Has fallado", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, R.string.fallo, Toast.LENGTH_SHORT).show();
             return false;
         }
 
 
-
-
     }
-    public void SeguirAvance(View view){
-        if(SolucionCorrecta()){
-        CambiarPista();
-            Toast.makeText(this, "hola mundo", Toast.LENGTH_SHORT).show();
-        this.finish();
+
+    public void SeguirAvance(View view) {
+        if (SolucionCorrecta()) {
+            CambiarPista();
+            Toast.makeText(this, R.string.seguirAvance, Toast.LENGTH_SHORT).show();
+            onBackPressed();
         }
     }
-    private String SaberSolucion(){
+
+    private String SaberSolucion() {
         String solucion;
         int numPista = SaberPista();
-        ArrayList<String> soluciones = new ArrayList<String>();
-        try
-        {
+        ArrayList<String> soluciones = new ArrayList<>();
+        try {
             InputStream fraw =
                     getResources().openRawResource(R.raw.soluciones);
 
             BufferedReader brin =
                     new BufferedReader(new InputStreamReader(fraw));
 
-            for (int i = 0; i < 5; i++){
+            for (int i = 0; i < 5; i++) {
                 solucion = brin.readLine();
                 soluciones.add(solucion.split("-")[1]);
             }
 
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             Log.e("Ficheros", "Error al leer fichero desde recurso raw");
         }
 
 
         return soluciones.get(numPista);
     }
-    private void EscribirPista(){
+
+    private void EscribirPista() {
         String linea;
         ArrayList<String> lineas = new ArrayList<String>();
-        try
-        {
+        try {
             InputStream fraw =
                     getResources().openRawResource(R.raw.pista);
 
             BufferedReader brin =
                     new BufferedReader(new InputStreamReader(fraw));
-            //hay que poner un condicional y una lectura de el fichero/BBDD donde tengamos almacenada la puntuación y segun el número de pista en el que esté muestre una u otra
-            for (int i = 0; i < 5; i++){
+
+            for (int i = 0; i < 5; i++) {
                 linea = brin.readLine();
                 lineas.add(linea.split("//")[1]);
             }
 
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             Log.e("Ficheros", "Error al leer fichero desde recurso raw");
         }
         SaberPista();
@@ -160,26 +153,30 @@ private void OcultarTexto(){
         pistaTexto.setText(lineas.get(pista));
 
     }
-private void MostrarVideo(){
 
-videoView.setVisibility(View.VISIBLE);
-    Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.resu);
-    videoView.setVideoURI(directorio);
+    private void MostrarVideo() {
 
-    MediaController mc = new MediaController(this);
-    mc.setAnchorView(videoView);
-    mc.setMediaPlayer(videoView);
-    videoView.setMediaController(mc);
-    videoView.start();
-}
-private int SaberPista(){
-//hacer este método casi entero para que busque el número de pista y la devuelva
-     pista = prefs.getInt("pista", 0);
-    return pista;
-}
-private void OcultarVideo(){
+        videoView.setVisibility(View.VISIBLE);
+        Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.resu);
+        videoView.setVideoURI(directorio);
 
-    videoView.setVisibility(View.INVISIBLE);
-}
+        MediaController mc = new MediaController(this);
+        mc.setAnchorView(videoView);
+        mc.setMediaPlayer(videoView);
+        videoView.setMediaController(mc);
+        videoView.start();
+    }
+
+    private int SaberPista() {
+
+
+        pista = prefs.getInt("pista", 0);
+        return pista;
+    }
+
+    private void OcultarVideo() {
+
+        videoView.setVisibility(View.INVISIBLE);
+    }
 
 }
