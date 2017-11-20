@@ -44,16 +44,16 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private boolean mPermissionDenied = false;
 
-    public void AbrirPista(View view) {
-        Intent irAPista = new Intent(getApplicationContext(), Pista2Activity.class);
-        startActivity(irAPista);
-    }
+
 
     public  void AbrirInformacion(View view){
         Intent irAINF = new Intent(getApplicationContext(), InfoActivity.class);
         startActivity(irAINF);
     }
-
+    public void AbrirPista(View view) {
+        Intent irAPista2 = new Intent(getApplicationContext(), Pista2Activity.class);
+        startActivity(irAPista2);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
