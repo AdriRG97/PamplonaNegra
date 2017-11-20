@@ -25,17 +25,20 @@ import java.util.ArrayList;
 public class Pista2Activity extends Activity {
     VideoView videoView;
     TextView pistaTexto;
+    EditText texto;
 
     public int pista;
+
     SharedPreferences.Editor editor;
     public SharedPreferences prefs;
-    EditText texto;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pista2);
+
         videoView = (VideoView) findViewById(R.id.videoPrueba);
         texto = (EditText) findViewById(R.id.textoPista);
         prefs = getSharedPreferences("pistas", Context.MODE_PRIVATE);
@@ -43,18 +46,16 @@ public class Pista2Activity extends Activity {
         Button btnPistaNormal =(Button)findViewById(R.id.btnEnviar);
 
         pista = SaberPista();
-        if (SaberPista() == 0 || SaberPista() == 4) {
+        if (pista == 0 || pista == 4) {
             MostrarVideo();
-        } else {
-            OcultarVideo();
-        }
-        if(SaberPista()==1){
+        } else if (pista == 1) {
             OcultarVideo();
             btnPistaDos.setVisibility(View.VISIBLE);
             btnPistaNormal.setVisibility(View.INVISIBLE);
             texto.setVisibility(View.INVISIBLE);
             texto.setEnabled(false);
-                    }else{
+        } else {
+            OcultarVideo();
             btnPistaDos.setVisibility(View.INVISIBLE);
             btnPistaNormal.setVisibility(View.VISIBLE);
             texto.setVisibility(View.VISIBLE);
@@ -103,9 +104,22 @@ public class Pista2Activity extends Activity {
     }
 
     private boolean SolucionCorrecta() {
-//falta comprobar en mayus minus con acentos sin acentos y que sea exactamente o no
+        String solucion = SaberSolucion();
+        Boolean correcto = false;
 
-        if (texto.getText().toString().equals(SaberSolucion())) {
+        if (solucion.contains("%")) {
+            String solucionSplit[] = solucion.split("%");
+            if (texto.getText().toString().toUpperCase().equals(solucionSplit[0].toUpperCase()) || texto.getText().toString().toUpperCase().equals(solucionSplit[1].toUpperCase())) {
+                correcto = true;
+            }
+        } else {
+            if (texto.getText().toString().equals(SaberSolucion())) {
+                correcto = true;
+            }
+        }
+
+
+        if (correcto) {
             Toast.makeText(this, R.string.acierto, Toast.LENGTH_SHORT).show();
             return true;
         } else {
@@ -117,9 +131,13 @@ public class Pista2Activity extends Activity {
     }
 
     public void SeguirAvance(View view) {
-        if (SolucionCorrecta()) {
+        if (SolucionCorrecta() && SaberPista() != 5) {
             CambiarPista();
             Toast.makeText(this, R.string.seguirAvance, Toast.LENGTH_SHORT).show();
+            onBackPressed();
+        } else {
+            Toast.makeText(this, "Fin del Juego", Toast.LENGTH_SHORT).show();
+            findViewById(R.id.button).setEnabled(false);
             onBackPressed();
         }
     }
@@ -147,7 +165,6 @@ public class Pista2Activity extends Activity {
 
         return soluciones.get(numPista);
     }
-
 
     private void EscribirPista() {
         String linea;

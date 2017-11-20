@@ -67,7 +67,8 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-         prefs =  getSharedPreferences("pistas", Context.MODE_PRIVATE);
+
+        prefs =  getSharedPreferences("pistas", Context.MODE_PRIVATE);
         editor = prefs.edit();
 
         editor.putInt("avance", 0);
