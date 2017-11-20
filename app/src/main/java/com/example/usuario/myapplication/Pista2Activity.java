@@ -198,6 +198,7 @@ public class Pista2Activity extends Activity {
     }
     public void AbrirPista3(View view) {
         Intent irAPista3 = new Intent(getApplicationContext(), Pista3ctivity.class);
+
         startActivity(irAPista3);
         finish();
     }
