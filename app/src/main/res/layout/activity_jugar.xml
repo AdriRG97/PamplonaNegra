@@ -52,7 +52,7 @@
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
             android:onClick="AbrirInformacion"
-            android:text="AYUDA" />
+            android:text="@string/ayuda" />
 
         <Button
             android:id="@+id/button"
@@ -67,7 +67,7 @@
 
             android:background="@color/colorPrimaryDark"
             android:onClick="AbrirPista"
-            android:text="PISTAS" />
+            android:text="@string/pistas" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
