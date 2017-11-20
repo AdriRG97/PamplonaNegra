@@ -53,10 +53,12 @@ public class Pista2Activity extends Activity {
             btnPistaDos.setVisibility(View.VISIBLE);
             btnPistaNormal.setVisibility(View.INVISIBLE);
             texto.setVisibility(View.INVISIBLE);
+            texto.setEnabled(false);
                     }else{
             btnPistaDos.setVisibility(View.INVISIBLE);
             btnPistaNormal.setVisibility(View.VISIBLE);
             texto.setVisibility(View.VISIBLE);
+            texto.setEnabled(true);
         }
 
         OcultarTexto();
@@ -197,6 +199,7 @@ public class Pista2Activity extends Activity {
     public void AbrirPista3(View view) {
         Intent irAPista3 = new Intent(getApplicationContext(), Pista3ctivity.class);
         startActivity(irAPista3);
+        finish();
     }
 
 }
