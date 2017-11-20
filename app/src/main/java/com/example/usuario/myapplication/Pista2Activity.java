@@ -2,11 +2,13 @@ package com.example.usuario.myapplication;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.MediaController;
 import android.widget.TextView;
@@ -37,6 +39,8 @@ public class Pista2Activity extends Activity {
         videoView = (VideoView) findViewById(R.id.videoPrueba);
         texto = (EditText) findViewById(R.id.textoPista);
         prefs = getSharedPreferences("pistas", Context.MODE_PRIVATE);
+       Button btnPistaDos =(Button)findViewById(R.id.btnPstDos);
+        Button btnPistaNormal =(Button)findViewById(R.id.btnEnviar);
 
         pista = SaberPista();
         if (SaberPista() == 0 || SaberPista() == 4) {
@@ -44,6 +48,17 @@ public class Pista2Activity extends Activity {
         } else {
             OcultarVideo();
         }
+        if(SaberPista()==1){
+            OcultarVideo();
+            btnPistaDos.setVisibility(View.VISIBLE);
+            btnPistaNormal.setVisibility(View.INVISIBLE);
+            texto.setVisibility(View.INVISIBLE);
+                    }else{
+            btnPistaDos.setVisibility(View.INVISIBLE);
+            btnPistaNormal.setVisibility(View.VISIBLE);
+            texto.setVisibility(View.VISIBLE);
+        }
+
         OcultarTexto();
         EscribirPista();
 
@@ -87,6 +102,7 @@ public class Pista2Activity extends Activity {
 
     private boolean SolucionCorrecta() {
 //falta comprobar en mayus minus con acentos sin acentos y que sea exactamente o no
+
         if (texto.getText().toString().equals(SaberSolucion())) {
             Toast.makeText(this, R.string.acierto, Toast.LENGTH_SHORT).show();
             return true;
@@ -129,6 +145,7 @@ public class Pista2Activity extends Activity {
 
         return soluciones.get(numPista);
     }
+
 
     private void EscribirPista() {
         String linea;
@@ -177,6 +194,10 @@ public class Pista2Activity extends Activity {
     private void OcultarVideo() {
 
         videoView.setVisibility(View.INVISIBLE);
+    }
+    public void AbrirPista3(View view) {
+        Intent irAPista3 = new Intent(getApplicationContext(), Pista3ctivity.class);
+        startActivity(irAPista3);
     }
 
 }

@@ -59,7 +59,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Configuraciones"
-            android:label="@string/title_activity_configuraciones"></activity>
+            android:label="@string/title_activity_configuraciones" />
+        <activity android:name=".Pista3ctivity"></activity>
     </application>
 
 </manifest>
