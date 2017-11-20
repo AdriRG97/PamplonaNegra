@@ -82,6 +82,7 @@ for (int i = 0; i<9; i++){
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
+                        finish();
                     }
                 });
 
@@ -94,7 +95,7 @@ for (int i = 0; i<9; i++){
             editor = prefs.edit();
             editor.putInt("pista", pistaAux + 1);
             editor.commit();
-            finish();
+
 
         }else{
             alerta().show();
