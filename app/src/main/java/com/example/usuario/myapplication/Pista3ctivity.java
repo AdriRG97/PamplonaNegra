@@ -82,7 +82,10 @@ for (int i = 0; i<9; i++){
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
-                        finish();
+                        if(comprobarNums() == 0){
+                            finish();
+                        }
+
                     }
                 });
 
