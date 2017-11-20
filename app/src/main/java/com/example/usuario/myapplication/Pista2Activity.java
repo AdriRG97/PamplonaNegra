@@ -97,7 +97,6 @@ public class Pista2Activity extends Activity {
             pista = prefs.getInt("pista", 0);
         }
 
-
     }
 
     private boolean SolucionCorrecta() {

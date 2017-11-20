@@ -5,8 +5,43 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
-    tools:context="com.example.usuario.myapplication.InfoActivity
+    android:weightSum="1"
+    tools:context="com.example.usuario.myapplication.InfoActivity">
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="214dp"
+        android:layout_height="171dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/siluetamuerto"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.807"
+        app:srcCompat="@drawable/siluetamuerto" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        style="@android:style/Widget.Material.Light.Spinner.Underlined"
+        android:layout_width="224dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.137" />
 
     <TextView
         android:id="@+id/textView3"
@@ -49,19 +84,6 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="252dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="60dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
-
     <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/webview"
         android:layout_width="fill_parent"
@@ -71,19 +93,11 @@
         tools:ignore="MissingConstraints" />
 
 
-    <VideoView
-        android:id="@+id/videoView_video"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:visibility="visible" />
-
     <ImageView
         android:id="@+id/creditos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
         android:background="@drawable/creditos"
         android:visibility="invisible"
         tools:layout_editor_absoluteX="0dp"

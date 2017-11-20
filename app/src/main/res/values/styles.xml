@@ -1,11 +1,14 @@
 <resources>
     parent="Theme.AppCompat.Light.NoActionBar"
     <!-- Modificar el tema a gusto ( sin actionbar-> full screen.) colores etc y llamar a este xml y no a colors.xml.... -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Material">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+
+            <!-- theme customizations -->
 
 </resources>
