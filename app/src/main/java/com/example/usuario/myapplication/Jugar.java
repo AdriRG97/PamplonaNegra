@@ -107,6 +107,8 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
 
         mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.mapstyles));
+        
+
 
         enableMyLocation();
 //        mMap.setMyLocationEnabled(true);
