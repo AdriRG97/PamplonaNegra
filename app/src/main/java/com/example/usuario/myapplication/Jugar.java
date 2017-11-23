@@ -9,6 +9,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -39,45 +40,56 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
     double lat = 0.0;
     double lng = 0.0;
     int pista;
+    Vibrator vibrador;
     SharedPreferences prefs;
     SharedPreferences.Editor editor;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private boolean mPermissionDenied = false;
 
 
-
-    public  void AbrirInformacion(View view){
+    public void AbrirInformacion(View view) {
         Intent irAINF = new Intent(getApplicationContext(), InfoActivity.class);
         startActivity(irAINF);
     }
+
     public void AbrirPista(View view) {
         Intent irAPista2 = new Intent(getApplicationContext(), Pista2Activity.class);
         startActivity(irAPista2);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        pista = prefs.getInt("pista", 0);
+        if (pista == -1) {
+            findViewById(R.id.button).setEnabled(false);
+            Toast.makeText(this, "Fin del Juego", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jugar);
-                // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        vibrador = ((Vibrator) getSystemService(VIBRATOR_SERVICE));
 
-        prefs =  getSharedPreferences("pistas", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("pistas", Context.MODE_PRIVATE);
         editor = prefs.edit();
 
         editor.putInt("avance", 0);
         editor.commit();
     }
-public int ConocerPista(){
-        pista =prefs.getInt("pista", 0);
+
+    public int ConocerPista() {
+        pista = prefs.getInt("pista", 0);
         return pista;
-}
+    }
 
     /**
      * Manipulates the map once available.
@@ -90,16 +102,19 @@ public int ConocerPista(){
      */
     @Override
 
+
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+
         mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.mapstyles));
 
         enableMyLocation();
 //        mMap.setMyLocationEnabled(true);
-
-        actualizarUbicacion(miUbicacion());
-        agregarMarcador(saberSitio().latitude, saberSitio().longitude);
-
+        if (ConocerPista() != -1) {
+//            Toast.makeText(this, "Ya has terminado el juego!", Toast.LENGTH_SHORT).show();
+            actualizarUbicacion(miUbicacion());
+            agregarMarcador(saberSitio().latitude, saberSitio().longitude);
+        }
     }
 
     private void enableMyLocation() {
@@ -138,10 +153,10 @@ public int ConocerPista(){
 
 
     private LatLng saberSitio() {
-       ConocerPista();
+        ConocerPista();
         String linea;
         String[] sitio = new String[0];
-        LatLng[] lugares= new LatLng[5];
+        LatLng[] lugares = new LatLng[5];
 
         try {
 
@@ -151,16 +166,16 @@ public int ConocerPista(){
             BufferedReader brin =
                     new BufferedReader(new InputStreamReader(fraw));
 //hacer un array y meter las pistas en un array para poder saber en k pista vamos
-            for (int i = 0; i < 5; i++){
+            for (int i = 0; i < 5; i++) {
                 linea = brin.readLine();
                 sitio = ((linea.split("//")[1]).split(","));
-                lugares[i]=new LatLng(Double.parseDouble(sitio[0]), Double.parseDouble(sitio[1]));
+                lugares[i] = new LatLng(Double.parseDouble(sitio[0]), Double.parseDouble(sitio[1]));
             }
             fraw.close();
         } catch (Exception ex) {
             Log.e("Ficheros", "Error al leer fichero desde recurso raw");
         }
-       // LatLng lugar = new LatLng(Double.parseDouble(sitio[0]), Double.parseDouble(sitio[1]));
+        // LatLng lugar = new LatLng(Double.parseDouble(sitio[0]), Double.parseDouble(sitio[1]));
         return lugares[pista];
     }
 
@@ -168,14 +183,16 @@ public int ConocerPista(){
         @Override
         public void onLocationChanged(Location location) {
             actualizarUbicacion(location);
-           Location sitio = new Location("");
-           sitio.setLatitude(saberSitio().latitude);
-           sitio.setLongitude(saberSitio().longitude);
+            Location sitio = new Location("");
+            sitio.setLatitude(saberSitio().latitude);
+            sitio.setLongitude(saberSitio().longitude);
 
 
-            if (miUbicacion().distanceTo(sitio)< 10){
+            if (miUbicacion().distanceTo(sitio) < 10) {
                 //TOAST para avisar de que estas cerca y permitir introducir una respuesta
                 editor.putInt("avance", 1);
+                editor.commit();
+                vibrador.vibrate(1000);
                 Toast.makeText(Jugar.this, "Ahora puedes intentar resolver el enigma", Toast.LENGTH_SHORT).show();
 
                 //esto da mucho error peta la aplicacion la cierra y toda la poya
@@ -224,11 +241,11 @@ public int ConocerPista(){
 
 
             //para que la ubicación coincida con el sitio de la proxima pista
-           // Location sitioaux = new Location("");
+            // Location sitioaux = new Location("");
             //sitioaux.setLatitude(saberSitio().latitude);
             //sitioaux.setLongitude(saberSitio().longitude);
 
-           // return sitioaux;
+            // return sitioaux;
             return location;
         }
         return null;

@@ -33,6 +33,7 @@ public class Pista2Activity extends Activity {
     public SharedPreferences prefs;
 
 
+    //TODO: Poner soniditos en las pistas
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,23 +69,23 @@ public class Pista2Activity extends Activity {
 
     }
 
+
     private int SaberAvance() {
-        int avance = prefs.getInt("avance", 0);
-        return avance;
+        return prefs.getInt("avance", 0);
     }
 
     private void OcultarTexto() {
         //lo he puesto para poder resolver pista sin estar en los lugares.
-        // if(SaberAvance()>0){
+        if (SaberAvance() > 0) {
 
 
         texto.setVisibility(View.VISIBLE);
 
 
-        //  }else{
-        //    texto.setVisibility(View.INVISIBLE);
+        } else {
+            texto.setVisibility(View.INVISIBLE);
 
-        //  }
+        }
     }
 
     private void CambiarPista() {
@@ -92,6 +93,9 @@ public class Pista2Activity extends Activity {
         editor = prefs.edit();
         if (pistaAux == 0) {
             editor.putInt("pista", 1);
+            editor.commit();
+        } else if (pistaAux == 4) {
+            editor.putInt("pista", -1);
             editor.commit();
         } else {
 
@@ -130,13 +134,13 @@ public class Pista2Activity extends Activity {
     }
 
     public void SeguirAvance(View view) {
-        if (SolucionCorrecta() && SaberPista() != 5) {
+        if (SolucionCorrecta() && SaberPista() != 4) {
             CambiarPista();
             Toast.makeText(this, R.string.seguirAvance, Toast.LENGTH_SHORT).show();
             onBackPressed();
-        } else {
-            Toast.makeText(this, "Fin del Juego", Toast.LENGTH_SHORT).show();
-            findViewById(R.id.button).setEnabled(false);
+        } else if (SolucionCorrecta() && SaberPista() == 4) {
+            CambiarPista();
+//            Toast.makeText(this, "Fin del Juego", Toast.LENGTH_SHORT).show();
             onBackPressed();
         }
     }
@@ -185,8 +189,11 @@ public class Pista2Activity extends Activity {
         }
         SaberPista();
         pistaTexto = (TextView) findViewById(R.id.txtPista);//quizás falta comprobar que el int que devulve la pista no sobrepasa los limites ya que si eso asi rompreá
-        pistaTexto.setText(lineas.get(pista));
-
+        try {
+            pistaTexto.setText(lineas.get(pista));
+        } catch (Exception e) {
+            Log.e("Pistas", "Ya no hay mas pistas");
+        }
     }
 
     private void MostrarVideo() {
