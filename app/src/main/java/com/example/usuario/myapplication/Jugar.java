@@ -93,6 +93,8 @@ public int ConocerPista(){
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.mapstyles));
+        
+
 
         enableMyLocation();
 //        mMap.setMyLocationEnabled(true);
