@@ -20,7 +20,9 @@
     <string name="jugarMayus">JUGAR</string>
     <string name="ajustesMayus">AJUSTES</string>
     <string name="elije">Elije:</string>
-
+    <string name="resolver">resolver:</string>
+    <string name="configuracion">Configuración:</string>
+    <string name="mapaOscuro">Mapa oscuro</string>
 
 
 
