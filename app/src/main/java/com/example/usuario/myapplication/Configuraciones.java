@@ -1,12 +1,10 @@
 package com.example.usuario.myapplication;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.graphics.*;
-import android.graphics.Color;
-import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -18,6 +16,25 @@ public class Configuraciones extends Activity {
 
     private final ColorStateList cslSeleccionado = new ColorStateList(new int[][]{new int[0]}, new int[]{0xff00ff00});
     private final ColorStateList cslDeseleccionado = new ColorStateList(new int[][]{new int[0]}, new int[]{0x00000000});
+
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.PAUSE);
+        startService(i);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.START);
+        startService(i);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

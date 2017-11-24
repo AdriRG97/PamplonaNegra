@@ -167,6 +167,7 @@ public class InfoActivity extends Activity {
 package com.example.usuario.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -179,6 +180,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -186,9 +188,24 @@ import java.util.List;
 public class InfoActivity extends Activity {
 
     private WebView webViewq;
-
     private ImageView miImagen;
 
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.PAUSE);
+        startService(i);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.START);
+        startService(i);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
