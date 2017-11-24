@@ -24,7 +24,9 @@
     <string name="configuracion">Configuración:</string>
     <string name="mapaOscuro">Mapa oscuro</string>
 
-
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 
 </resources>

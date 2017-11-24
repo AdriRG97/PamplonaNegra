@@ -10,6 +10,7 @@
     <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
     <application
         android:allowBackup="true"
@@ -61,7 +62,13 @@
         <activity
             android:name=".Configuraciones"
             android:label="@string/title_activity_configuraciones" />
-        <activity android:name=".Pista3ctivity"></activity>
+        <activity android:name=".Pista3ctivity" />
+        <activity
+            android:name=".VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_video"
+            android:theme="@style/FullscreenTheme"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>
