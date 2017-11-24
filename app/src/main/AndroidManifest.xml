@@ -68,7 +68,9 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_video"
             android:theme="@style/FullscreenTheme"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
+
+        <service android:name=".AudioService" />
     </application>
 
 </manifest>
