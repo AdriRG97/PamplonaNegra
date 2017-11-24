@@ -8,7 +8,6 @@
     android:weightSum="1"
     tools:context="com.example.usuario.myapplication.InfoActivity">
 
-
     <ImageButton
         android:id="@+id/imageButton"
         style="@style/Widget.AppCompat.ImageButton"
@@ -91,7 +90,6 @@
         tools:layout_editor_absoluteY="31dp"
         tools:layout_editor_absoluteX="-223dp"
         tools:ignore="MissingConstraints" />
-
 
     <ImageView
         android:id="@+id/creditos"

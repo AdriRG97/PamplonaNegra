@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="0.373" />
 
     <TextView
-        android:id="@+id/lblMapaOscuro"
+        android:id="@+id/lblIdioma"
         android:layout_width="165dp"
         android:layout_height="24dp"
         android:layout_marginBottom="8dp"
@@ -75,7 +75,7 @@
         android:checked="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintHorizontal_bias="0.972"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.203" />
@@ -89,7 +89,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="168dp"
-        android:backgroundTint="@android:drawable/screen_background_light_transparent"
+        android:backgroundTint="@android:color/transparent"
         android:scaleType="centerCrop"
         android:src="@drawable/bang"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -135,5 +135,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.365" />
+
 
 </android.support.constraint.ConstraintLayout>

@@ -14,7 +14,8 @@
     <string name="seguirAvance">Puedes continuar con la siguiente pisa</string>
     <string name="pistas">PISTAS</string>
     <string name="ayuda">AYUDA</string>
-    <string name="puesAqui">Pues aquí habrá configuración x2 </string>
+    <string name="lblMapaOscuro">Mapa Oscuro</string>
+    <string name="lblIdioma">Idioma</string>
     <string name="infoMayus">INFORMACIÓN</string>
     <string name="jugarMayus">JUGAR</string>
     <string name="ajustesMayus">AJUSTES</string>
