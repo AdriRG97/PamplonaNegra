@@ -1,5 +1,5 @@
 <resources>
-    parent="Theme.AppCompat.Light.NoActionBar"
+    <!--parent="Theme.AppCompat.Light.NoActionBar"-->
     <!-- Modificar el tema a gusto ( sin actionbar-> full screen.) colores etc y llamar a este xml y no a colors.xml.... -->
     <style name="AppTheme" parent="android:Theme.Material">
         <!-- Customize your theme here. -->
