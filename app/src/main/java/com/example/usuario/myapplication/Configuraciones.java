@@ -1,55 +1,74 @@
 package com.example.usuario.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.widget.EditText;
+import android.content.SharedPreferences.Editor;
 import android.content.res.ColorStateList;
+import android.graphics.*;
+import android.graphics.Color;
+import android.media.AudioManager;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.app.Activity;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
+
+
+
+import com.kyleduo.switchbutton.SwitchButton;
 
 public class Configuraciones extends Activity {
 
     private ImageButton euskera;
     private ImageButton castellano;
     private ImageButton bang;
-
-    private final ColorStateList cslSeleccionado = new ColorStateList(new int[][]{new int[0]}, new int[]{0xff00ff00});
-    private final ColorStateList cslDeseleccionado = new ColorStateList(new int[][]{new int[0]}, new int[]{0x00000000});
-
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.PAUSE);
-        startService(i);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.START);
-        startService(i);
-    }
-
+    private com.kyleduo.switchbutton.SwitchButton swSonido;
+    private com.kyleduo.switchbutton.SwitchButton swMapa;
+    public SharedPreferences prefs;
+    private final ColorStateList cslSeleccionado = new ColorStateList(new int[][]{new int[0]}, new int[]{Color.GREEN});
+    private final ColorStateList cslDeseleccionado = new ColorStateList(new int[][]{new int[0]}, new int[]{Color.TRANSPARENT});
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuraciones);
 
+
 //        euskera = (ImageButton) findViewById(R.id.imgEuskera);
   //      castellano = (ImageButton) findViewById(R.id.imgCastellano);
 
-
+        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
+        swSonido = (SwitchButton)findViewById(R.id.swSonido);
+        swMapa = (SwitchButton)findViewById(R.id.swMapaOscuro);
         euskera = (ImageButton)findViewById(R.id.imgEuskera);
         castellano = (ImageButton) findViewById(R.id.imgCastellano);
         bang = (ImageButton)findViewById(R.id.imgBang);
 
         euskera.setBackgroundTintList(cslDeseleccionado);
 
+        if(prefs.getBoolean("sonido", true) == false) {
+
+            swSonido.setChecked(false);
+            onPause();
+
+               }else{
+            swSonido.setChecked(true);
+            onResume();
+               }
+
+        if(prefs.getBoolean("mapaNegro", true) == false) {
+            swMapa.setChecked(false);
+            reproducirDisparo();
+        }else{
+            swMapa.setChecked(true);
+            reproducirBala();
+        }
         euskera.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -82,7 +101,53 @@ public class Configuraciones extends Activity {
                 reproducirDisparo();
                 return false;
             }
+        });
 
+        swSonido.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(swSonido.isChecked()) {
+                    editor = prefs.edit();
+                    editor.putBoolean("sonido", true);
+                    editor.commit();
+                    onResume();
+                }else{
+                    editor = prefs.edit();
+                    editor.putBoolean("sonido", false);
+                    editor.commit();
+                    onPause();
+                }
+            }
+        });
+
+
+
+        swMapa.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+             reproducirDisparo(); //Para ver por qué no funcionaba, es que no entra no al cambiar el check inexplicablemente. (Ya que en el de arriba idéntico si entra)
+                if(swMapa.isChecked()) {
+                    editor = prefs.edit();
+                    editor.putBoolean("mapaNegro", true);
+                    editor.commit();
+
+                }else{
+                    editor = prefs.edit();
+                    editor.putBoolean("mapaNegro", false);
+                    editor.commit();
+
+                }
+            }
+        });
+        swMapa.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(swMapa.isChecked()) {
+
+                }else{
+
+                }
+            }
         });
 
     }
@@ -103,8 +168,6 @@ public class Configuraciones extends Activity {
     }
 
 
-
-
     private void reproducirBala() {
         MediaPlayer mp = MediaPlayer.create(this, R.raw.bala);
         mp.start();
@@ -114,5 +177,26 @@ public class Configuraciones extends Activity {
         MediaPlayer mp = MediaPlayer.create(this, R.raw.disparo);
         mp.start();
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.PAUSE);
+        startService(i);
+    } @Override
+    public void onResume() {
+        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
+        if (prefs.getBoolean("sonido", true) == false) {
+            onPause();
+        } else {
+            super.onResume();
+            Intent i = new Intent(this, AudioService.class);
+            i.putExtra("action", AudioService.START);
+            startService(i);
+        }
+    }
+
+
 
 }

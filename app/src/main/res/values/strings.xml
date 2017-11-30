@@ -15,13 +15,14 @@
     <string name="pistas">PISTAS</string>
     <string name="ayuda">AYUDA</string>
     <string name="lblMapaOscuro">Mapa Oscuro</string>
+    <string name="lblSonido">Sonido</string>
     <string name="lblIdioma">Idioma</string>
     <string name="infoMayus">INFORMACIÓN</string>
     <string name="jugarMayus">JUGAR</string>
     <string name="ajustesMayus">AJUSTES</string>
-    <string name="elije">Elije:</string>
+    <string name="elige">Elige:</string>
     <string name="resolver">resolver:</string>
-    <string name="configuracion">Configuración:</string>
+    <string name="configuracion">CONFIGURACIÓN</string>
     <string name="mapaOscuro">Mapa oscuro</string>
 
     <string name="title_activity_video">VideoActivity</string>

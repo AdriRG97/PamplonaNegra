@@ -167,7 +167,9 @@ public class InfoActivity extends Activity {
 package com.example.usuario.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -190,7 +192,7 @@ public class InfoActivity extends Activity {
     private WebView webViewq;
     private ImageView miImagen;
 
-
+    public SharedPreferences prefs;
     @Override
     public void onPause() {
         super.onPause();
@@ -201,10 +203,14 @@ public class InfoActivity extends Activity {
 
     @Override
     public void onResume() {
+        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
         super.onResume();
         Intent i = new Intent(this, AudioService.class);
         i.putExtra("action", AudioService.START);
         startService(i);
+        if (prefs.getBoolean("sonido", true) == false) {
+            onPause();
+        }
     }
 
     @Override

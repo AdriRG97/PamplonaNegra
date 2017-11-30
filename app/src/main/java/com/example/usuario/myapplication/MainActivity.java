@@ -2,14 +2,16 @@ package com.example.usuario.myapplication;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-
+    public SharedPreferences prefs;
     Button siguiente, next, conf;
 //    MediaPlayer mediaPlayer;
 
@@ -23,10 +25,15 @@ public class MainActivity extends Activity {
 
     @Override
     public void onResume() {
+        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
         super.onResume();
         Intent i = new Intent(this, AudioService.class);
         i.putExtra("action", AudioService.START);
-        startService(i);
+        startService(i); // Si este cabrón lo quitas de aquí peta la app fuertemente, es la única manera que de que funcione aunque sea cutre que se escuche algunos milisegundos en cada activity.
+        //También peta si cambias el START por PAUSE y lo intentas "STARTEAR" en el if
+        if (prefs.getBoolean("sonido", true) == false) {
+            onPause();
+        }
     }
 
 
@@ -36,7 +43,6 @@ public class MainActivity extends Activity {
 //                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 //                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 25);
 //                }
-
 
         siguiente = (Button) findViewById(R.id.button2);
         siguiente.setOnClickListener(new View.OnClickListener() {
