@@ -29,8 +29,7 @@ public class MainActivity extends Activity {
         super.onResume();
         Intent i = new Intent(this, AudioService.class);
         i.putExtra("action", AudioService.START);
-        startService(i); // Si este cabrón lo quitas de aquí peta la app fuertemente, es la única manera que de que funcione aunque sea cutre que se escuche algunos milisegundos en cada activity.
-        //También peta si cambias el START por PAUSE y lo intentas "STARTEAR" en el if
+        startService(i);
         if (prefs.getBoolean("sonido", true) == false) {
             onPause();
         }
