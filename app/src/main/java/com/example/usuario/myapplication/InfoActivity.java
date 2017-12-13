@@ -269,7 +269,7 @@ public class InfoActivity extends Activity {
                     webViewq.loadUrl("about:blank");
                     if (webViewq.getVisibility() == View.INVISIBLE) {
                         webViewq.setVisibility(View.VISIBLE);
-                        webViewq.loadUrl("https://es.lipsum.com/");
+                        webViewq.loadUrl("http://asir.com.es:1719/index.php");
                         webViewq.getSettings().setBuiltInZoomControls(true);
                         webViewq.getSettings().setDisplayZoomControls(false);
                         adapterView.setSelection(0);

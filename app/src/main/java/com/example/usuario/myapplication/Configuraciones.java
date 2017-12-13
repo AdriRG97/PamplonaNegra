@@ -125,7 +125,7 @@ public class Configuraciones extends Activity {
         swMapa.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-             reproducirDisparo(); //Para ver por qué no funcionaba, es que no entra no al cambiar el check inexplicablemente. (Ya que en el de arriba idéntico si entra)
+
                 if(swMapa.isChecked()) {
                     editor = prefs.edit();
                     editor.putBoolean("mapaNegro", true);
@@ -139,16 +139,7 @@ public class Configuraciones extends Activity {
                 }
             }
         });
-        swMapa.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(swMapa.isChecked()) {
 
-                }else{
-
-                }
-            }
-        });
 
     }
 
