@@ -1,5 +1,61 @@
-1//Aqui va la pista número uno.Aqui va la pista número uno.Aqui va la pista número uno.Aqui va la pista número uno.Aqui va la pista número uno.Aqui va la pista número uno.Aqui va la pista número uno.Aqui va la pista número uno.Aqui va la pista número uno.Aqui va la pista número uno.Aqui va la pista número uno.
-2//Aqui va la pista número Dos.Aqui va la pista número Dos.Aqui va la pista número Dos.Aqui va la pista número Dos.Aqui va la pista número Dos.Aqui va la pista número Dos.Aqui va la pista número Dos.Aqui va la pista número Dos.Aqui va la pista número Dos.Aqui va la pista número Dos.Aqui va la pista número Dos.
-3//Aqui va la pista número tres
-4//Aqui va la pista número cuatro
-5//Aqui va la pista número cinco
+1//Una mañana fui a retirar dinero del cajero automático y me fue imposible, de modo que, para solucionar el problema, llamé al Servicio de Atención al Cliente. Esta fue la conversación:
+   —Yo: Buenos días, no sé qué sucede, mi clave es distinta y, por alguna razón, no puedo sacar efectivo.
+   —Servicio de Atención al Cliente: Un momento, por favor, no se retire.
+   	Tras unos segundos, en los que escuché a mi interlocutor teclear en el ordenador, la voz regresó:
+   —Servicio de Atención al Cliente: Disculpe la espera. A partir de este instante, su clave ya es otra. ¿Desea algo más?
+   —Yo: No, muchas gracias.
+   	Al teclear la nueva clave, pude al fin sacar dinero.
+
+   ¿Cuál era la antigua y cuál es la nueva?
+//Goiz batean kutxazain automatikora jo nuen, dirua ateratzera. Ezinezkoa egin zitzaidan, haatik. Arazoa konpontzeko, Bezeroari Arreta emateko Zerbitzura deitu nuen. Hona gure solasaldia:
+  —Nik: Egun on, ez dakit zer gertatzen den, nire pasa-hitza desberdina da eta, auskalo zergatik, ezin dut eskudirurik atera.
+  —Bezeroari Arreta emateko Zerbitzua: Memento bat, faborez, ez zaitez joan.
+  	Segundo batzuk geroago nire solaskidea entzun nuen ordenagailuan tekleatzen; ondoren, ahotsa itzuli zen:
+  —Bezeroari Arreta emateko Zerbitzua: Barkatu itxaronaldia. Une honetatik aurrera pasa-hitz berria duzu. Gehiagorik nahi?
+  —Nik: Ez, mila esker.
+  	Pasa-hitz berria tekleatuta atera ahal izan nuen, azkenik, dirua.
+
+  Zein da zaharra eta zein berria?
+2//Si quiere tener acceso a una nueva pista, rellene el siguiente cuadro teniendo en cuenta las instrucciones:
+   	a) Los números 3, 6, 8 están en la horizontal superior.
+   	b) Los números 5, 7, 9 están en la horizontal inferior.
+   	c) Los números 1, 2, 3, 6, 7, 9 no están en la vertical izquierda.
+   	d) Los números 1, 3, 4, 5, 8, 9 no están en la vertical derecha.
+//Pista berri baterako sarbidea izan nahi baldin baduzu, bete ondoko laukia jarraibideak kontuan harturik:
+  	a) 3, 6, 8 zenbakiak goiko horizontalean daude.
+  	b) 5, 7, 9 zenbakiak beheko horizontalean daude.
+  	c) 1, 2, 3, 6, 7, 9 zenbakiak ez daude ezkerreko bertikalean.
+  	d) 1, 3, 4, 5, 8, 9 zenbakiak ez daude eskuineko bertikalean.
+3//Anteayer, Juan tenía 15 años; el año que viene cumplirá 18.
+   ¿Qué día es hoy?
+//Herenegun, Jonek 15 urte zituen; heldu den urtean 18 beteko ditu.
+  Zer egun da gaur?
+4//Veamos cuánto sabe usted de números, inspector.
+
+   La clave para acceder a la siguiente pista es una cifra de seis dígitos que debe reunir las siguientes condiciones.
+
+   	a) Ninguno de ellos es impar.
+   	b) El primero es un tercio del quinto y la mitad del tercero.
+   	c) El segundo es el menor de todos.
+   	d) El último es la diferencia entre el cuarto y el quinto.
+//Ikusiko dugu nola zabiltzan zenbakietan, inspektorea.
+
+  Hurrengo pista atzemateko gakoa sei digituko zenbakia da, ondoko baldintzak bete behar dituena.
+
+  	a) Ez dago bakoiti bakar bat ere.
+  	b) Lehenbizikoa da bosgarrenaren herena eta hirugarrenaren erdia.
+  	c) Bigarrena da denetan txikiena.
+  	d) Azkena da laugarrenaren eta bosgarrenaren arteko kendura.
+5//Un grupo de policías quiere infiltrar a uno de sus agentes en un club clandestino; para ello, primero deben averiguar la contraseña que les dará acceso al interior, de modo que deciden vigilar el lugar.
+   A los diez minutos, un tipo se acerca a la puerta y llama. Una voz pronuncia: “18”, a lo que él responde: “9”, tras lo que le dejan pasar. Al cabo de un rato, otro hombre aparece y llama. En esta ocasión, la voz señala: “8”, a lo que el recién llegado contesta: “4” para que le franqueen la entrada, y apenas un par de minutos después, un nuevo visitante responde “7” al “14” planteado desde el interior.
+   Los policías creen haber dado al fin con la clave, de modo que deciden enviar al agente de incógnito. Al llamar, la voz dice: “0”, y él contesta: “0”.  Pero la puerta no sólo no se abre, sino que le disparan a través de ella.
+   Convencidos de que el sistema de claves que han desentrañado es el correcto, los policías deciden intentarlo una vez más. Otro agente se acerca despacio y, tras golpear con los nudillos, escucha: “6”, a lo que responde “3” con idéntico resultado que su compañero.
+
+   ¿Cuáles eran las claves correctas que tenían que haber pronunciado los policías para entrar?
+//Polizia talde bat bere agenteetariko bat infiltratu nahi du klub klandestino batean; horretarako, lehenik jakin behar dute barnera sartzeko pasa-hitza; hortaz, tokia zelatatzea erabaki dute.
+  Hamar minutu pasata, morroi bat atera hurbildu eta deitu egin du. Ahots batek, barnetik: “18”, eta morroiak erantzun: “9”, horren ondotik, pasatzen utzi diote. Handik pixka batera, bertze gizon bat agertu da, baita deitu ere. Oraingoan, ahotsak: “8”, eta horri etorri berriak: “4”. Atea ireki diote. Ezta bi minutu geroago ere, bertze bisitari bat. Barnetik “14” eta hark “7” erantzun.
+  Poliziek uste dutenez aurkitu dutela pasa-hitza, isilpeko agentea bidaltzea erabaki dute. Deitzean, ahotsak: “0”, eta agenteak erantzun: “0".  Baina atea ireki ez, eta gainera tiro egin diote barnetik.
+  Sinetsirik pasa-hitzen sistema zuzen asmatu dutela, poliziek erabaki dute behin berriz saiatzea. Beste agente bat poliki-poliki eta atean kax-kax egin ondoan aditu du: “6”, eta horri erantzun: “3”. Emaitza, lagunaren patu bera.
+
+  Zein ziren sartzeko poliziek esan behar zituzten gako-hitz zuzenak?
+

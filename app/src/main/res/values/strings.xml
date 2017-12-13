@@ -9,9 +9,9 @@
     <string name="informaci_n">Información</string>
     <string name="alertita">¡Cuidado!, estás cerca de resolver el enigma</string>
     <string name="title_activity_configuraciones">Configuraciones</string>
-    <string name="acierto">Has Acertadum!</string>
+    <string name="acierto">Has Acertado!</string>
     <string name="fallo">Has fallado</string>
-    <string name="seguirAvance">Puedes continuar con la siguiente pisa</string>
+    <string name="seguirAvance">Puedes continuar con la siguiente pista</string>
     <string name="pistas">PISTAS</string>
     <string name="ayuda">AYUDA</string>
     <string name="lblMapaOscuro">Mapa Oscuro</string>
@@ -24,6 +24,27 @@
     <string name="resolver">resolver:</string>
     <string name="configuracion">CONFIGURACIÓN</string>
     <string name="mapaOscuro">Mapa oscuro</string>
+
+    <string name="eus_informaci_n">Informazioa</string>
+    <string name="eus_alertita">¡Erne! Enigma argitzear zaude</string>
+    <string name="eus_title_activity_configuraciones">Konfigurazioak</string>
+    <string name="eus_acierto">Asmatu duzu!</string>
+    <string name="eus_fallo">Huts egin duzu</string>
+    <string name="eus_seguirAvance">Hurrengo argibiderekin aurrera egin dezakezu</string>
+    <string name="eus_pistas">PISTAK</string>
+    <string name="eus_ayuda">LAGUNTZA</string>
+    <string name="eus_lblMapaOscuro">Mapa Iluna</string>
+    <string name="eus_lblSonido">Soinua</string>
+    <string name="eus_lblIdioma">Hizkuntza</string>
+    <string name="eus_infoMayus">INFORMAZIOA</string>
+    <string name="eus_jugarMayus">JOLASTEA</string>
+    <string name="eus_ajustesMayus">DOIKUNTZAK</string>
+    <string name="eus_elige">Aukeratzen du:</string>
+    <string name="eus_resolver">ebaztea:</string>
+    <string name="eus_configuracion">KONFIGURAZIOA</string>
+    <string name="eus_mapaOscuro">Mapa iluna</string>
+
+
 
     <string name="title_activity_video">VideoActivity</string>
     <string name="dummy_button">Dummy Button</string>
