@@ -38,8 +38,8 @@
     <string name="eus_lblIdioma">Hizkuntza</string>
     <string name="eus_infoMayus">INFORMAZIOA</string>
     <string name="eus_jugarMayus">JOLASTEA</string>
-    <string name="eus_ajustesMayus">DOIKUNTZAK</string>
-    <string name="eus_elige">Aukeratzen du:</string>
+    <string name="eus_ajustesMayus">KONFIGURAZIOA</string>
+    <string name="eus_elige">Aukeratu:</string>
     <string name="eus_resolver">ebaztea:</string>
     <string name="eus_configuracion">KONFIGURAZIOA</string>
     <string name="eus_mapaOscuro">Mapa iluna</string>
