@@ -3,16 +3,22 @@ package com.example.usuario.myapplication;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
 public class VideoActivity extends Activity {
+    VideoView videoView;
+
+
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -92,6 +98,17 @@ public class VideoActivity extends Activity {
         mVisible = true;
   // mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
+
+        videoView = (VideoView) findViewById(R.id.videoPrueba);
+        Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.resu);
+        videoView.setVideoURI(directorio);
+
+        MediaController mc = new MediaController(this);
+        mc.setAnchorView(videoView);
+        mc.setMediaPlayer(videoView);
+        videoView.setMediaController(mc);
+        videoView.start();
+
 
 
         // Set up the user interaction to manually show or hide the system UI.
