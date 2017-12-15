@@ -54,13 +54,10 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
 
     public void AbrirPista(View view) {
 
-        if(ConocerPista() == 1){
-            Intent irAPistaVideo = new Intent(getApplicationContext(), VideoActivity.class);
-            startActivity(irAPistaVideo);//no funsiona
-        }else{
+
             Intent irAPista2 = new Intent(getApplicationContext(), Pista2Activity.class);
             startActivity(irAPista2);
-        }
+
 
     }
 

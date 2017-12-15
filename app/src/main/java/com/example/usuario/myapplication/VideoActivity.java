@@ -87,10 +87,10 @@ public class VideoActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_video);//find by id?
+       setContentView(R.layout.activity_video);//find by id?
 
         mVisible = true;
-//        mControlsView = findViewById(R.id.fullscreen_content_controls);
+  // mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
 
 
