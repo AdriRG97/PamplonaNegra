@@ -3,6 +3,8 @@ package com.example.usuario.myapplication;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -55,7 +57,7 @@ public class VideoActivity extends Activity {
                     | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
     };
-    private View mControlsView;
+   // private View mControlsView;
     private final Runnable mShowPart2Runnable = new Runnable() {
         @Override
         public void run() {
@@ -64,7 +66,7 @@ public class VideoActivity extends Activity {
             if (actionBar != null) {
                 actionBar.show();
             }
-            mControlsView.setVisibility(View.VISIBLE);
+           // mControlsView.setVisibility(View.VISIBLE);
         }
     };
     private boolean mVisible;
@@ -96,18 +98,24 @@ public class VideoActivity extends Activity {
        setContentView(R.layout.activity_video);//find by id?
 
         mVisible = true;
-  // mControlsView = findViewById(R.id.fullscreen_content_controls);
+    //mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
 
-        videoView = (VideoView) findViewById(R.id.videoPrueba);
+        videoView = (VideoView) findViewById(R.id.videoPrueba2);
         Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.resu);
         videoView.setVideoURI(directorio);
 
-        MediaController mc = new MediaController(this);
-        mc.setAnchorView(videoView);
-        mc.setMediaPlayer(videoView);
-        videoView.setMediaController(mc);
+       MediaController mc = new MediaController(this);
+       mc.setAnchorView(videoView);
+      mc.setMediaPlayer(videoView);
+      videoView.setMediaController(mc);
         videoView.start();
+        videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                AbrirJuego();
+            }
+        });
 
 
 
@@ -125,6 +133,15 @@ public class VideoActivity extends Activity {
 //        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
     }
 
+
+    public void AbrirJuego() {
+
+
+        Intent IrAjuego = new Intent(getApplicationContext(), Jugar.class);
+        startActivity(IrAjuego);
+
+
+    }
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -149,7 +166,7 @@ public class VideoActivity extends Activity {
         if (actionBar != null) {
             actionBar.hide();
         }
-        mControlsView.setVisibility(View.GONE);
+        //mControlsView.setVisibility(View.GONE);
         mVisible = false;
 
         // Schedule a runnable to remove the status and navigation bar after a delay

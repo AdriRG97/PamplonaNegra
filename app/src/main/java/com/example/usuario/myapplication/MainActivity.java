@@ -90,9 +90,9 @@ public class MainActivity extends Activity {
 
                     int numPista = prefs.getInt("pista",0);
                     if(numPista == 1|| numPista == 5 || numPista == 0){
-                        Intent siguiente = new Intent(MainActivity.this, VideoActivity.class);
+                        Intent video = new Intent(MainActivity.this, VideoActivity.class);
 //                mediaPlayer.release();
-                        startActivity(siguiente);
+                        startActivity(video);
                     }else{
                         Intent siguiente = new Intent(MainActivity.this, Jugar.class);
 //                mediaPlayer.release();
