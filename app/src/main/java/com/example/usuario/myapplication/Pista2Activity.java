@@ -7,10 +7,12 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.MediaController;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -227,4 +229,22 @@ public class Pista2Activity extends Activity {
         finish();
     }
 
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+
+            switch (keyCode) {
+                case KeyEvent.KEYCODE_BACK:
+
+                   if(prefs.getInt("pista", 0)==1){
+
+                   }else{
+                       onBackPressed();
+                   }
+
+
+            }            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
 }
