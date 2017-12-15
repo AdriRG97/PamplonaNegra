@@ -171,6 +171,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -191,32 +192,47 @@ public class InfoActivity extends Activity {
 
     private WebView webViewq;
     private ImageView miImagen;
+    private TextView lblInfo, lblElige;
 
     public SharedPreferences prefs;
     @Override
     public void onPause() {
         super.onPause();
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.PAUSE);
-        startService(i);
+   //     if (prefs.getBoolean("sonido", true) == true) {
+            pausarCancion();
+     //  }
     }
 
     @Override
     public void onResume() {
-        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
         super.onResume();
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.START);
-        startService(i);
-        if (prefs.getBoolean("sonido", true) == false) {
-            onPause();
+        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
+        if (prefs.getBoolean("sonido", true) == true) {
+            reproducirCancion();
         }
+        comprobarIdioma();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info_activity);
+        // Seteamos en una Variable donde tenemos la fuente (podemos omitir este paso y ponerla directamente cuando cargamos la fuente)
+        String carpetaFuente = "fonts/lon.ttf";
+
+        lblElige = (TextView) findViewById(R.id.lblElige);
+        lblInfo = (TextView) findViewById(R.id.lblInfo);
+// Cargamos la fuente
+        Typeface fuente = Typeface.createFromAsset(getAssets(), carpetaFuente);
+
+// Aplicamos la fuente
+        lblElige.setTypeface(fuente);
+        lblInfo.setTypeface(fuente);
+
+// Aplicamos el tamaño de fuente
+       // reproducirCancion();
+
+        lblInfo.setTextSize(36);
 
         miImagen = (ImageView) findViewById(R.id.creditos);
 
@@ -227,8 +243,6 @@ public class InfoActivity extends Activity {
         webViewq.getSettings().setJavaScriptEnabled(true);
 // Coger la referencia desde XML layout
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
-
-
 
         // Initializing a String Array
         String[] elementos = new String[]{"Elige", "Cómo jugar", "Ver nuestra web", "Créditos"};
@@ -245,7 +259,6 @@ public class InfoActivity extends Activity {
                     if (miImagen.getVisibility() == View.INVISIBLE){
                         adapterView.setEnabled(true);
                     }
-
                 }
                 if (pos != 0) {
                     Toast.makeText(adapterView.getContext(), (String) adapterView.getItemAtPosition(pos), Toast.LENGTH_SHORT).show();
@@ -344,6 +357,35 @@ public class InfoActivity extends Activity {
         return super.onKeyDown(keyCode, event);
     }
 
+    public void comprobarIdioma(){
+        prefs = getSharedPreferences("euskera", Context.MODE_PRIVATE);
+        if (prefs.getBoolean("euskera", true) == true) {
+            TextView tv = (TextView) findViewById(R.id.lblInfo);
+            tv.setText(R.string.eus_infoMayus);
+            tv = (TextView) findViewById(R.id.lblElige);
+            tv.setText(R.string.eus_elige);
+            lblElige.setTextSize(20);
+        } else {
+            TextView tv = (TextView) findViewById(R.id.lblInfo);
+            tv.setText(R.string.infoMayus);
+            tv = (TextView) findViewById(R.id.lblElige);
+            tv.setText(R.string.elige);
+            lblElige.setTextSize(32);
+
+        }
+    }
+
+    public void reproducirCancion(){
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.START);
+        startService(i);
+    }
+
+    public void pausarCancion(){
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.PAUSE);
+        startService(i);
+    }
 
 }
 

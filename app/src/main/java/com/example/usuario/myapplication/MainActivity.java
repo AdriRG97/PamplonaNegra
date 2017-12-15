@@ -5,36 +5,40 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
-
+    private AudioService a = new AudioService();
     public SharedPreferences prefs;
+    private SharedPreferences.Editor editor;
     Button siguiente, next, conf;
 //    MediaPlayer mediaPlayer;
 
     @Override
     public void onPause() {
         super.onPause();
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.PAUSE);
-        startService(i);
+      // if (prefs.getBoolean("sonido", true) == true) {
+       pausarCancion();
+      //  }
     }
+
+
 
     @Override
     public void onResume() {
-        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
         super.onResume();
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.START);
-        startService(i);
-        if (prefs.getBoolean("sonido", true) == false) {
-            onPause();
-        }
-    }
+        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
 
+        if (prefs.getBoolean("sonido", true) == true) {
+            reproducirCancion();
+        }
+        comprobarIdioma();
+
+}
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +46,30 @@ public class MainActivity extends Activity {
 //                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 //                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 25);
 //                }
-
+        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
+        if (prefs.getBoolean("sonido", true) == true) {
+        reproducirCancion();
+        }
+// Obtenemos la id de los botones donde queremos cambiar la fuente
         siguiente = (Button) findViewById(R.id.button2);
+        next = (Button) findViewById(R.id.button);
+        conf = (Button) findViewById(R.id.btnAjustes);
+// Seteamos en una Variable donde tenemos la fuente (podemos omitir este paso y ponerla directamente cuando cargamos la fuente)
+        String carpetaFuente = "fonts/lon.ttf";
+
+// Cargamos la fuente
+        Typeface fuente = Typeface.createFromAsset(getAssets(), carpetaFuente);
+
+// Aplicamos la fuente
+        siguiente.setTypeface(fuente);
+        next.setTypeface(fuente);
+        conf.setTypeface(fuente);
+
+// Aplicamos el tamaño de fuente
+        siguiente.setTextSize(18);
+        next.setTextSize(18);
+        conf.setTextSize(16);
+
         siguiente.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -92,5 +118,35 @@ public class MainActivity extends Activity {
 
     }
 
+    public void comprobarIdioma(){
+        prefs = getSharedPreferences("euskera", Context.MODE_PRIVATE);
+        if (prefs.getBoolean("euskera", true) == true) {
+            TextView tv = (TextView) findViewById(R.id.btnAjustes);
+            tv.setText(R.string.eus_ajustesMayus);
+            tv = (TextView) findViewById(R.id.button);
+            tv.setText(R.string.eus_jugarMayus);
+            tv = (TextView) findViewById(R.id.button2);
+            tv.setText(R.string.eus_infoMayus);
 
+        } else {
+            TextView tv = (TextView) findViewById(R.id.btnAjustes);
+            tv.setText(R.string.ajustesMayus);
+            tv = (TextView) findViewById(R.id.button);
+            tv.setText(R.string.jugarMayus);
+            tv = (TextView) findViewById(R.id.button2);
+            tv.setText(R.string.infoMayus);
+
+        }
+    }
+    public void reproducirCancion(){
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.START);
+        startService(i);
+    }
+
+    public void pausarCancion(){
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.PAUSE);
+        startService(i);
+    }
 }
