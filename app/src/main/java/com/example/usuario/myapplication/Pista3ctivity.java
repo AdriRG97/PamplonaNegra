@@ -53,7 +53,7 @@ public class Pista3ctivity extends Activity {
         numerosIntroducidos[6] = numSie;
         numerosIntroducidos[7] = numOch;
         numerosIntroducidos[8] = numNue;
-        prefs = getSharedPreferences("pistas", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
 
 
 

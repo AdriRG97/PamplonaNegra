@@ -41,7 +41,7 @@ public class Pista2Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pista2);
-        prefs = getSharedPreferences("pistas", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
 
         texto = (EditText) findViewById(R.id.textoPista);
        Button btnPistaDos =(Button)findViewById(R.id.btnPstDos);

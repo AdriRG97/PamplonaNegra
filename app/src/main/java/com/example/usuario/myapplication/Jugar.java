@@ -84,7 +84,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
 
         vibrador = ((Vibrator) getSystemService(VIBRATOR_SERVICE));
 
-        prefs = getSharedPreferences("pistas", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
         editor = prefs.edit();
 
         editor.putInt("avance", 0);

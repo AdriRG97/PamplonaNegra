@@ -3,7 +3,9 @@ package com.example.usuario.myapplication;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,6 +21,8 @@ import android.widget.VideoView;
  */
 public class VideoActivity extends Activity {
     VideoView videoView;
+    public SharedPreferences prefs;
+    SharedPreferences.Editor editor;
 
 
     /**
@@ -96,24 +100,38 @@ public class VideoActivity extends Activity {
         super.onCreate(savedInstanceState);
 
        setContentView(R.layout.activity_video);//find by id?
-
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
+        editor = prefs.edit();
         mVisible = true;
     //mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
 
-        videoView = (VideoView) findViewById(R.id.videoPrueba2);
-        Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.resu);
-        videoView.setVideoURI(directorio);
 
-       MediaController mc = new MediaController(this);
-       mc.setAnchorView(videoView);
-      mc.setMediaPlayer(videoView);
-      videoView.setMediaController(mc);
-        videoView.start();
+
+        int video = prefs.getInt("video", 0);
+        if (video ==0){
+            videoView = (VideoView) findViewById(R.id.videoPrueba2);
+            Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.resu);
+            videoView.setVideoURI(directorio);
+
+            MediaController mc = new MediaController(this);
+            mc.setAnchorView(videoView);
+            mc.setMediaPlayer(videoView);
+            videoView.setMediaController(mc);
+            videoView.start();
+
+        }else if(video == 2){//para poner el segundo video
+
+        }
+
+
         videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
+                editor.putInt("video", 1);
                 AbrirJuego();
+                finish();
+
             }
         });
 

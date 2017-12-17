@@ -208,7 +208,7 @@ public class InfoActivity extends Activity {
     @Override
     public void onResume() {
         super.onResume();
-        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
         if (prefs.getBoolean("sonido", true) == true) {
             reproducirCancion();
         }
@@ -362,7 +362,7 @@ public class InfoActivity extends Activity {
     }
 
     public void comprobarIdioma(){
-        prefs = getSharedPreferences("euskera", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
         if (prefs.getBoolean("euskera", true) == true) {
             TextView tv = (TextView) findViewById(R.id.lblInfo);
             tv.setText(R.string.eus_infoMayus);

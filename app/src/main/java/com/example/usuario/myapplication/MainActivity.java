@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
     @Override
     public void onResume() {
         super.onResume();
-        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
 
         if (prefs.getBoolean("sonido", true) == true) {
             reproducirCancion();
@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
 //                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 //                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 25);
 //                }
-        prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
         if (prefs.getBoolean("sonido", true) == true) {
         reproducirCancion();
         }
@@ -121,7 +121,7 @@ public class MainActivity extends Activity {
     }
 
     public void comprobarIdioma(){
-        prefs = getSharedPreferences("euskera", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
         if (prefs.getBoolean("euskera", true) == true) {
             TextView tv = (TextView) findViewById(R.id.btnAjustes);
             tv.setText(R.string.eus_ajustesMayus);
