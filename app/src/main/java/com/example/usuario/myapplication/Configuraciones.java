@@ -51,7 +51,7 @@ public class Configuraciones extends Activity {
         lblSonido = (TextView)findViewById(R.id.lblMapaOscuro2);
         lblIdioma = (TextView)findViewById(R.id.lblIdioma);
 
-        prefs = getSharedPreferences("euskera", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
 
         euskera.setBackgroundTintList(cslDeseleccionado);
         if(prefs.getBoolean("euskera", true) == true) {
@@ -173,7 +173,7 @@ public class Configuraciones extends Activity {
         castellano.setBackgroundTintList(cslDeseleccionado);
         euskera.setEnabled(false);
         castellano.setEnabled(true);
-        prefs = getSharedPreferences("euskera", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
         editor = prefs.edit();
         editor.putBoolean("euskera", true);
         editor.commit();
@@ -194,7 +194,7 @@ public class Configuraciones extends Activity {
         castellano.setBackgroundTintList(cslSeleccionado);
         euskera.setEnabled(true);
         castellano.setEnabled(false);
-        prefs = getSharedPreferences("euskera", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
         editor = prefs.edit();
         editor.putBoolean("euskera", false);
         editor.commit();
@@ -230,7 +230,7 @@ public class Configuraciones extends Activity {
     @Override
     public void onResume() {
         super.onResume();
-       prefs = getSharedPreferences("sonido", Context.MODE_PRIVATE);
+       prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
         if (prefs.getBoolean("sonido", true) == true) {
             reproducirCancion();
             swSonido.setChecked(true);
