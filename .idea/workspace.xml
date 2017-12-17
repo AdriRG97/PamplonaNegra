@@ -15,16 +15,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Configuraciones.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Configuraciones.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/InfoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/InfoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Jugar.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Jugar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista2Activity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista2Activity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista3ctivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista3ctivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java" />
     </list>
     <ignored path="PamplonaNegra.iws" />
@@ -55,19 +51,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VideoActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="102" column="22" lean-forward="false" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="22" />
-              <folding>
-                <element signature="e#4468#4709#0" expanded="true" />
-                <element signature="e#4708#4709#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="activity_pista2.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pista2.xml">
           <provider selected="true" editor-type-id="android-designer2">
@@ -84,6 +67,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="130" column="38" lean-forward="false" selection-start-line="130" selection-start-column="38" selection-end-line="130" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -95,8 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lbl</find>
-      <find>sws</find>
       <find>tex</find>
       <find>csl</find>
       <find>if</find>
@@ -125,6 +126,8 @@
       <find>getshared</find>
       <find>oncre</find>
       <find>getsha</find>
+      <find>inten</find>
+      <find>num</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1875,10 +1878,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Configuraciones.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/InfoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Jugar.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista2Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista3ctivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2433,7 +2436,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513532204725" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513532678438" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2481,7 +2484,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513532204725" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513532678438" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2664,7 +2667,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513532204726" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513532678440" />
       </method>
     </configuration>
     <list size="1">
@@ -2913,7 +2916,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513530851953</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="App vFinal_beta&#10;shared -&gt;configs">
+      <created>1513532224600</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1513532224600</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3010,7 +3020,8 @@
     <MESSAGE value="App vFinal_beta&#10;Video Activity Fallo" />
     <MESSAGE value="App vFinal_beta&#10;quitado video de la pista 2" />
     <MESSAGE value="App vFinal_beta&#10;quitado video de la pista 2 complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="App vFinal_beta&#10;quitado video de la pista 2 complete" />
+    <MESSAGE value="App vFinal_beta&#10;shared -&gt;configs" />
+    <option name="LAST_COMMIT_MESSAGE" value="App vFinal_beta&#10;shared -&gt;configs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3027,8 +3038,14 @@
           <properties />
           <option name="timeStamp" value="61" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="63" />
+      <option name="time" value="64" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -3327,20 +3344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pista2.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding>
-            <element signature="e#2055#2073#0" expanded="false" />
-            <marker date="1513529421534" expanded="true" signature="2741:3155" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/AudioService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="745">
@@ -3372,14 +3375,6 @@
           <folding>
             <marker date="1513532155381" expanded="true" signature="9066:9096" ph="//..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="123" column="25" lean-forward="false" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3425,14 +3420,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pista2.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="e#2055#2073#0" expanded="false" />
+            <marker date="1513529421534" expanded="true" signature="2741:3155" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="102" column="22" lean-forward="false" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="22" />
-          <folding>
-            <element signature="e#4468#4709#0" expanded="true" />
-            <element signature="e#4708#4709#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="174">
+          <caret line="130" column="38" lean-forward="false" selection-start-line="130" selection-start-column="38" selection-end-line="130" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>

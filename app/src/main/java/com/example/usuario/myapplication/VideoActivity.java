@@ -129,6 +129,7 @@ public class VideoActivity extends Activity {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 editor.putInt("video", 1);
+                editor.commit();
                 AbrirJuego();
                 finish();
 
