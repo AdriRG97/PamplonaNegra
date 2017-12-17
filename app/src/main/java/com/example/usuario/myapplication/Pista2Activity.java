@@ -200,7 +200,7 @@ public class Pista2Activity extends Activity {
     private void MostrarVideo() {
 
         videoView.setVisibility(View.VISIBLE);
-        Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.resu);
+        Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.video1);
         videoView.setVideoURI(directorio);
 
         MediaController mc = new MediaController(this);

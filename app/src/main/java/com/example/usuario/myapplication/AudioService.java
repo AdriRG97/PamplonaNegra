@@ -61,7 +61,6 @@ public class AudioService extends Service {
         if (loop != null) loop.release();
     }
 
-    @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return null;

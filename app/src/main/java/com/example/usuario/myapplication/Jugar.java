@@ -54,10 +54,8 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
 
     public void AbrirPista(View view) {
 
-
-            Intent irAPista2 = new Intent(getApplicationContext(), Pista2Activity.class);
-            startActivity(irAPista2);
-
+        Intent irAPista2 = new Intent(getApplicationContext(), Pista2Activity.class);
+         startActivity(irAPista2);
 
     }
 

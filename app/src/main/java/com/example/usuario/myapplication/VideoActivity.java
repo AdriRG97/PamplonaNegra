@@ -102,7 +102,7 @@ public class VideoActivity extends Activity {
         mContentView = findViewById(R.id.fullscreen_content);
 
         videoView = (VideoView) findViewById(R.id.videoPrueba2);
-        Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.resu);
+        Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.video1);
         videoView.setVideoURI(directorio);
 
        MediaController mc = new MediaController(this);
