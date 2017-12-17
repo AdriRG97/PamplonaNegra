@@ -1,7 +1,9 @@
 package com.example.usuario.myapplication;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -48,15 +50,64 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
 
 
     public void AbrirInformacion(View view) {
-        Intent irAINF = new Intent(getApplicationContext(), InfoActivity.class);
-        startActivity(irAINF);
+//        Intent irAINF = new Intent(getApplicationContext(), InfoActivity.class);
+//        startActivity(irAINF);
+        boolean euskera=prefs.getBoolean("euskera", false);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        switch (ConocerPista()) {
+            case 0:
+                if(euskera){
+                    builder.setMessage(R.string.pista1_eus);
+                }else{
+                    builder.setMessage(R.string.pista1);
+                }
+                break;
+            case 1:
+                if(euskera){
+                    builder.setMessage(R.string.pista2_eus);
+                }else{
+                    builder.setMessage(R.string.pista2);
+                }
+                break;
+            case 2:
+                if(euskera){
+                    builder.setMessage(R.string.pista3_eus);
+                }else{
+                    builder.setMessage(R.string.pista3);
+                }
+                break;
+            case 3:
+                if(euskera){
+                    builder.setMessage(R.string.pista4_eus);
+                }else{
+                    builder.setMessage(R.string.pista4);
+                }
+                break;
+            case 4:
+                if(euskera){
+                    builder.setMessage(R.string.pista5_eus);
+                }else{
+                    builder.setMessage(R.string.pista5);
+                }
+                break;
+            default:
+                builder.setMessage("error");
+                break;
+        }
+        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.create().show();
+
     }
 
     public void AbrirPista(View view) {
 
         Intent irAPista2 = new Intent(getApplicationContext(), Pista2Activity.class);
          startActivity(irAPista2);
-
     }
 
 
@@ -65,6 +116,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         super.onResume();
         pista = prefs.getInt("pista", 0);
         if (pista == -1) {
+            findViewById(R.id.button2).setEnabled(false);
             findViewById(R.id.button).setEnabled(false);
             Toast.makeText(this, "Fin del Juego", Toast.LENGTH_SHORT).show();
         }
@@ -81,7 +133,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
 
         vibrador = ((Vibrator) getSystemService(VIBRATOR_SERVICE));
-
+        findViewById(R.id.button).setEnabled(false);
         prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
         editor = prefs.edit();
 
@@ -116,7 +168,6 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         if (ConocerPista() != -1) {
 //            Toast.makeText(this, "Ya has terminado el juego!", Toast.LENGTH_SHORT).show();
             actualizarUbicacion(miUbicacion());
-
         }
     }
 
@@ -134,12 +185,13 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
     }
 
 
-
     private void actualizarUbicacion(Location location) {
         if (location != null) {
             lat = location.getLatitude();
             lng = location.getLongitude();
-
+            LatLng latLng=new LatLng(lat, lng);
+            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 18);
+            mMap.animateCamera(cameraUpdate);
         }
     }
 
@@ -185,23 +237,10 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
                 editor.putInt("avance", 1);
                 editor.commit();
                 vibrador.vibrate(1000);
+                findViewById(R.id.button).setEnabled(true);
                 Toast.makeText(Jugar.this, "Ahora puedes intentar resolver el enigma", Toast.LENGTH_SHORT).show();
-
-                //esto da mucho error peta la aplicacion la cierra y toda la poya
-
-              /*  AlertDialog alertita =  new AlertDialog.Builder(getApplicationContext())
-                        .setMessage(R.string.alertita)
-                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // After click on Ok, request the permission.
-
-                            }
-                        })
-                        .setNegativeButton(android.R.string.cancel, null)
-                        .create();
-                alertita.show();*/
-
+            }else{
+                findViewById(R.id.button).setEnabled(false);
             }
 
         }
@@ -228,9 +267,8 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
                 == PackageManager.PERMISSION_GRANTED) {
 //        mMap.setMyLocationEnabled(true);
             Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            actualizarUbicacion(location);
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 15000, 0, locationListener);
-
+            actualizarUbicacion(location);
 
             //para que la ubicación coincida con el sitio de la proxima pista
             // Location sitioaux = new Location("");
