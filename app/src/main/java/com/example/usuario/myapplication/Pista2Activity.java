@@ -41,14 +41,15 @@ public class Pista2Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pista2);
-
+        prefs = getSharedPreferences("pistas", Context.MODE_PRIVATE);
 
         texto = (EditText) findViewById(R.id.textoPista);
        Button btnPistaDos =(Button)findViewById(R.id.btnPstDos);
         Button btnPistaNormal =(Button)findViewById(R.id.btnEnviar);
 
         pista = SaberPista();
-        if (pista == 1 ) {
+        if (pista == 1) {
+
 
             btnPistaDos.setVisibility(View.VISIBLE);
             btnPistaNormal.setVisibility(View.INVISIBLE);
@@ -62,7 +63,7 @@ public class Pista2Activity extends Activity {
             texto.setEnabled(true);
         }
 
-
+        OcultarTexto();
         EscribirPista();
 
 
@@ -196,12 +197,14 @@ public class Pista2Activity extends Activity {
     }
 
 
+
     private int SaberPista() {
 
 
         pista = prefs.getInt("pista", 0);
         return pista;
     }
+
 
     public void AbrirPista3(View view) {
         Intent irAPista3 = new Intent(getApplicationContext(), Pista3ctivity.class);
