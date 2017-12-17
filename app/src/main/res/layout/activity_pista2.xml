@@ -6,42 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.example.usuario.myapplication.Pista2Activity">
 
-    <FrameLayout
-        android:id="@+id/videoAnchor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <VideoView
-            android:id="@+id/videoPrueba"
-            android:layout_width="match_parent"
-            android:layout_height="329dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-    </FrameLayout>
-
     <TextView
         android:id="@+id/txtPista"
         android:layout_width="310dp"
         android:layout_height="133dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="368dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoAnchor"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.698" />
 
     <EditText
         android:id="@+id/textoPista"
@@ -56,8 +34,10 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPista" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPista"
+        app:layout_constraintVertical_bias="0.553" />
 
     <Button
         android:id="@+id/btnEnviar"
@@ -67,13 +47,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="SeguirAvance"
         android:text="@string/resolver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textoPista"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnPstDos"
         app:layout_constraintTop_toBottomOf="@+id/txtPista"
-        android:onClick="SeguirAvance"
-        />
+        app:layout_constraintVertical_bias="0.796" />
 
     <Button
         android:id="@+id/btnPstDos"
@@ -83,14 +64,15 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="AbrirPista3"
         android:text="@string/resolver"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textoPista"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPista"
-        android:onClick="AbrirPista3"
-        />
+        app:layout_constraintVertical_bias="0.796" />
 
     <!--<Button-->
     <!--android:id="@+id/btnPlay"-->

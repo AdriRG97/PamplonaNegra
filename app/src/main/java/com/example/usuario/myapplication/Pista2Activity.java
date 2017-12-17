@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 
 public class Pista2Activity extends Activity {
-    VideoView videoView;
+
     TextView pistaTexto;
     EditText texto;
 
@@ -41,23 +41,22 @@ public class Pista2Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pista2);
+        prefs = getSharedPreferences("pistas", Context.MODE_PRIVATE);
 
-        videoView = (VideoView) findViewById(R.id.videoPrueba);
         texto = (EditText) findViewById(R.id.textoPista);
        Button btnPistaDos =(Button)findViewById(R.id.btnPstDos);
         Button btnPistaNormal =(Button)findViewById(R.id.btnEnviar);
 
         pista = SaberPista();
-        if (pista == 0 || pista == 4) {
-            MostrarVideo();
-        } else if (pista == 1) {
-            OcultarVideo();
+        if (pista == 1) {
+
+
             btnPistaDos.setVisibility(View.VISIBLE);
             btnPistaNormal.setVisibility(View.INVISIBLE);
             texto.setVisibility(View.INVISIBLE);
             texto.setEnabled(false);
         } else {
-            OcultarVideo();
+
             btnPistaDos.setVisibility(View.INVISIBLE);
             btnPistaNormal.setVisibility(View.VISIBLE);
             texto.setVisibility(View.VISIBLE);
@@ -197,18 +196,7 @@ public class Pista2Activity extends Activity {
         }
     }
 
-    private void MostrarVideo() {
 
-        videoView.setVisibility(View.VISIBLE);
-        Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.video1);
-        videoView.setVideoURI(directorio);
-
-        MediaController mc = new MediaController(this);
-        mc.setAnchorView(videoView);
-        mc.setMediaPlayer(videoView);
-        videoView.setMediaController(mc);
-        videoView.start();
-    }
 
     private int SaberPista() {
 
@@ -217,10 +205,7 @@ public class Pista2Activity extends Activity {
         return pista;
     }
 
-    private void OcultarVideo() {
 
-        videoView.setVisibility(View.INVISIBLE);
-    }
     public void AbrirPista3(View view) {
         Intent irAPista3 = new Intent(getApplicationContext(), Pista3ctivity.class);
 
