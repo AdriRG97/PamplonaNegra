@@ -90,11 +90,12 @@ public class MainActivity extends Activity {
 
                 //--hay que comprobar que la ubicación esta activada (no el permiso) si no da 'error' ( no error pero no funciona)
 
-                    int numPista = prefs.getInt("pista",0);
-                    if(numPista == 1|| numPista == 5 || numPista == 0){
-                        Intent video = new Intent(MainActivity.this, VideoActivity.class);
+                    int video = prefs.getInt("video",0);
+                    if( video == 0 || video == 2){
+                        Intent videoStart = new Intent(MainActivity.this, VideoActivity.class);
 //                mediaPlayer.release();
-                        startActivity(video);
+
+                        startActivity(videoStart);
                     }else{
                         Intent siguiente = new Intent(MainActivity.this, Jugar.class);
 //                mediaPlayer.release();
