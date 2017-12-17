@@ -189,7 +189,43 @@ public class Pista2Activity extends Activity {
         SaberPista();
         pistaTexto = (TextView) findViewById(R.id.txtPista);//quizás falta comprobar que el int que devulve la pista no sobrepasa los limites ya que si eso asi rompreá
         try {
+            switch (prefs.getInt("pista", 0)) {
+                case 1:
+                    if(prefs.getBoolean("euskera", false)){
+                        pistaTexto.setText(R.string.enigma1);
+                    }else {
+                        pistaTexto.setText(R.string.enigma1_eus);
+                    }
+                    break;
+                case 2:  if(prefs.getBoolean("euskera", false)){
+                    pistaTexto.setText(R.string.enigma2);
+                }else {
+                    pistaTexto.setText(R.string.enigma2_eus);
+                }
+                    break;
+                case 3: if(prefs.getBoolean("euskera", false)){
+                    pistaTexto.setText(R.string.enigma3);
+                }else {
+                    pistaTexto.setText(R.string.enigma3_eus);
+                }
+                    break;
+                case 4:  if(prefs.getBoolean("euskera", false)){
+                    pistaTexto.setText(R.string.enigma4);
+                }else {
+                    pistaTexto.setText(R.string.enigma4_eus);
+                }
+                    break;
+                case 5: if(prefs.getBoolean("euskera", false)){
+                    pistaTexto.setText(R.string.enigma5);
+                }else {
+                    pistaTexto.setText(R.string.enigma5_eus);
+                }
+                    break;
+                default:
+
+        }
             pistaTexto.setText(R.string.enigma1);
+
         } catch (Exception e) {
             Log.e("Pistas", "Ya no hay mas pistas");
         }
