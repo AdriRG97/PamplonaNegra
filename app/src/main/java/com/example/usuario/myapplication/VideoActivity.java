@@ -111,7 +111,7 @@ public class VideoActivity extends Activity {
         int video = prefs.getInt("video", 0);
         if (video ==0){
             videoView = (VideoView) findViewById(R.id.videoPrueba2);
-            Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.resu);
+            Uri directorio = Uri.parse("android.resource://com.example.usuario.myapplication/" + R.raw.video1);
             videoView.setVideoURI(directorio);
 
             MediaController mc = new MediaController(this);

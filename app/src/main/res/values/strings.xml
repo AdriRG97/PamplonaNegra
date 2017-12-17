@@ -45,6 +45,186 @@
     <string name="eus_mapaOscuro">Mapa iluna</string>
 
 
+//ENIGMAS
+
+    <string name="enigma1">
+        Una mañana fui a retirar dinero del cajero automático y me fue imposible, de modo que, para solucionar el problema, llamé al Servicio de Atención al Cliente. Esta fue la conversación: \n
+   —Yo: Buenos días, no sé qué sucede, mi clave es distinta y, por alguna razón, no puedo sacar efectivo.\n
+   —Servicio de Atención al Cliente: Un momento, por favor, no se retire.\n
+   	Tras unos segundos, en los que escuché a mi interlocutor teclear en el ordenador, la voz regresó:\n
+   —Servicio de Atención al Cliente: Disculpe la espera. A partir de este instante, su clave ya es otra. ¿Desea algo más?\n
+   —Yo: No, muchas gracias.\n
+   	Al teclear la nueva clave, pude al fin sacar dinero.\n\n
+
+   ¿Cuál era la antigua y cuál es la nueva?
+    </string>
+
+    <string name="enigma1_eus">
+        Goiz batean kutxazain automatikora jo nuen, dirua ateratzera. Ezinezkoa egin zitzaidan, haatik. Arazoa konpontzeko, Bezeroari Arreta emateko Zerbitzura deitu nuen. Hona gure solasaldia: \n
+  —Nik: Egun on, ez dakit zer gertatzen den, nire pasa-hitza desberdina da eta, auskalo zergatik, ezin dut eskudirurik atera. \n
+  —Bezeroari Arreta emateko Zerbitzua: Memento bat, faborez, ez zaitez joan. \n
+  	Segundo batzuk geroago nire solaskidea entzun nuen ordenagailuan tekleatzen; ondoren, ahotsa itzuli zen: \n
+  —Bezeroari Arreta emateko Zerbitzua: Barkatu itxaronaldia. Une honetatik aurrera pasa-hitz berria duzu. Gehiagorik nahi?
+  —Nik: Ez, mila esker. \n
+  	Pasa-hitz berria tekleatuta atera ahal izan nuen, azkenik, dirua. \n\n
+
+  Zein da zaharra eta zein berria?
+    </string>
+
+    <string name="enigma2">
+Si quiere tener acceso a una nueva pista, rellene el siguiente cuadro teniendo en cuenta las instrucciones: \n
+   	a) Los números 3, 6, 8 están en la horizontal superior. \n
+   	b) Los números 5, 7, 9 están en la horizontal inferior. \n
+   	c) Los números 1, 2, 3, 6, 7, 9 no están en la vertical izquierda. \n
+    d) Los números 1, 3, 4, 5, 8, 9 no están en la vertical derecha.
+    </string>
+
+    <string name="enigma2_eus">
+      Pista berri baterako sarbidea izan nahi baldin baduzu, bete ondoko laukia jarraibideak kontuan harturik: \n
+  	a) 3, 6, 8 zenbakiak goiko horizontalean daude. \n
+  	b) 5, 7, 9 zenbakiak beheko horizontalean daude. \n
+  	c) 1, 2, 3, 6, 7, 9 zenbakiak ez daude ezkerreko bertikalean. \n
+  	d) 1, 3, 4, 5, 8, 9 zenbakiak ez daude eskuineko bertikalean.
+    </string>
+
+    <string name="enigma3">
+Anteayer, Juan tenía 15 años; el año que viene cumplirá 18. \n
+   ¿Qué día es hoy?
+    </string>
+
+    <string name="enigma3_eus">
+    Herenegun, Jonek 15 urte zituen; heldu den urtean 18 beteko ditu. \n
+  Zer egun da gaur?
+    </string>
+
+    <string name="enigma4">
+    Veamos cuánto sabe usted de números, inspector. \n\n
+La clave para acceder a la siguiente pista es una cifra de seis dígitos que debe reunir las siguientes condiciones. \n\n
+
+    a) Ninguno de ellos es impar. \n
+    b) El primero es un tercio del quinto y la mitad del tercero. \n
+    c) El segundo es el menor de todos. \n
+    d) El último es la diferencia entre el cuarto y el quinto.
+    </string>
+
+    <string name="enigma4_eus">
+    Ikusiko dugu nola zabiltzan zenbakietan, inspektorea. \n\n
+
+  Hurrengo pista atzemateko gakoa sei digituko zenbakia da, ondoko baldintzak bete behar dituena. \n\n
+
+  	a) Ez dago bakoiti bakar bat ere. \n
+  	b) Lehenbizikoa da bosgarrenaren herena eta hirugarrenaren erdia. \n
+  	c) Bigarrena da denetan txikiena. \n
+  	d) Azkena da laugarrenaren eta bosgarrenaren arteko kendura. \n
+    </string>
+
+    <string name="enigma5">
+    Un grupo de policías quiere infiltrar a uno de sus agentes en un club clandestino; para ello, primero deben averiguar la contraseña que les dará acceso al interior, de modo que deciden vigilar el lugar. \n
+   A los diez minutos, un tipo se acerca a la puerta y llama. Una voz pronuncia: “18”, a lo que él responde: “9”, tras lo que le dejan pasar. Al cabo de un rato, otro hombre aparece y llama. En esta ocasión, la voz señala: “8”, a lo que el recién llegado contesta: “4” para que le franqueen la entrada, y apenas un par de minutos después, un nuevo visitante responde “7” al “14” planteado desde el interior. \n
+   Los policías creen haber dado al fin con la clave, de modo que deciden enviar al agente de incógnito. Al llamar, la voz dice: “0”, y él contesta: “0”.  Pero la puerta no sólo no se abre, sino que le disparan a través de ella. \n
+   Convencidos de que el sistema de claves que han desentrañado es el correcto, los policías deciden intentarlo una vez más. Otro agente se acerca despacio y, tras golpear con los nudillos, escucha: “6”, a lo que responde “3” con idéntico resultado que su compañero. \n\n
+
+   ¿Cuáles eran las claves correctas que tenían que haber pronunciado los policías para entrar?
+    </string>
+
+    <string name="enigma5_eus">
+Polizia talde bat bere agenteetariko bat infiltratu nahi du klub klandestino batean; horretarako, lehenik jakin behar dute barnera sartzeko pasa-hitza; hortaz, tokia zelatatzea erabaki dute. \n
+  Hamar minutu pasata, morroi bat atera hurbildu eta deitu egin du. Ahots batek, barnetik: “18”, eta morroiak erantzun: “9”, horren ondotik, pasatzen utzi diote. Handik pixka batera, bertze gizon bat agertu da, baita deitu ere. Oraingoan, ahotsak: “8”, eta horri etorri berriak: “4”. Atea ireki diote. Ezta bi minutu geroago ere, bertze bisitari bat. Barnetik “14” eta hark “7” erantzun. \n
+  Poliziek uste dutenez aurkitu dutela pasa-hitza, isilpeko agentea bidaltzea erabaki dute. Deitzean, ahotsak: “0”, eta agenteak erantzun: “0".  Baina atea ireki ez, eta gainera tiro egin diote barnetik. \n
+  Sinetsirik pasa-hitzen sistema zuzen asmatu dutela, poliziek erabaki dute behin berriz saiatzea. Beste agente bat poliki-poliki eta atean kax-kax egin ondoan aditu du: “6”, eta horri erantzun: “3”. Emaitza, lagunaren patu bera. \n\n
+
+  Zein ziren sartzeko poliziek esan behar zituzten gako-hitz zuzenak?
+    </string>
+
+
+
+
+    <string name="pista1">
+    En las calles de Pamplona hay algunas estatuas dedicadas a escritores,
+    pero solo en una de ellas el autor está escribiendo. \n\n
+
+    Encuéntrela.   </string>
+
+    <string name="pista2">
+    Busque el edificio donde estuvo instalado el
+    primer Instituto de Segunda Enseñanza de Navarra
+    en el que estudió un famoso autor de la llamada
+    Generación del 98. \n\n
+
+    Colóquese frente a su puerta.   </string>
+
+    <string name="pista3">
+    Localice el primer edificio modernista que
+    se construyó en la ciudad. Cerca de él hay un comercio
+    con el nombre de un famoso héroe
+    de la mitología griega. \n\n
+
+    Enfréntese a su estrella.  </string>
+
+    <string name="pista4">
+    Encuentre el lugar donde, durante varios siglos,
+estuvo situada la cárcel de Pamplona. \n
+Muy cerca hay un edificio gótico que sigue albergando
+la misma institución que se instaló allí
+en el siglo XVI. \n\n
+
+Sitúese bajo su dintel.
+  </string>
+
+    <string name="pista5">
+Un grupo de policías quiere infiltrar a uno de sus agentes en un club clandestino; para ello, primero deben averiguar la contraseña que les dará acceso al interior, de modo que deciden vigilar el lugar. \n
+   A los diez minutos, un tipo se acerca a la puerta y llama. Una voz pronuncia: “18”, a lo que él responde: “9”, tras lo que le dejan pasar. Al cabo de un rato, otro hombre aparece y llama. En esta ocasión, la voz señala: “8”, a lo que el recién llegado contesta: “4” para que le franqueen la entrada, y apenas un par de minutos después, un nuevo visitante responde “7” al “14” planteado desde el interior. \n
+   Los policías creen haber dado al fin con la clave, de modo que deciden enviar al agente de incógnito. Al llamar, la voz dice: “0”, y él contesta: “0”.  Pero la puerta no sólo no se abre, sino que le disparan a través de ella. \n
+   Convencidos de que el sistema de claves que han desentrañado es el correcto, los policías deciden intentarlo una vez más. Otro agente se acerca despacio y, tras golpear con los nudillos, escucha: “6”, a lo que responde “3” con idéntico resultado que su compañero. \n\n
+
+        ¿Cuáles eran las claves correctas que tenían que haber pronunciado los policías para entrar?
+  </string>
+
+
+
+    <string name="pista1_eus">
+    Iruñeko karriketan zenbait estatua daude idazleen omenez,
+    baina horietako bakar batean ari da egilea idazten. \n\n
+
+    Aurkitu zein den.   </string>
+
+    <string name="pista2_eus">
+    Bila ezazu zer eraikinetan egon zen
+    Nafarroako Bigarren Hezkuntzako lehen Institutua;
+    bertan idazle famatu batek ikasi zuen,
+    98ko belaunaldikoa bera. \n\n
+
+    Para zaitez haren atearen parean.
+</string>
+
+    <string name="pista3_eus">
+Aurkitu hirian egindako
+lehen eraikin modernista. Saltoki bat du hurbil,
+Greziako mitologiako heroi
+famatu baten izena duena. \n\n
+
+Aurre egin haren izarrari
+</string>
+    <string name="pista4_eus">
+
+Aurkitu non egon zen, hainbat mendetan,
+Iruñeko kartzela. \n
+Hurbil-hurbil eraikin gotiko bat dago. \n
+Erakunde bat bertan kokatu zen XVI. mendean
+eta bertan segitzen du gaur egun. \n\n
+
+Para zaitez haren ateburuaren azpian.
+</string>
+    <string name="pista5_eus">
+Belzunce jauna askatu nahi baduzu, zoaz Iruñeko zezen-plaza zaharrena zegoen lekura. \n
+Han zutabe bakar bat dago
+buruan kapitel joniar
+bat duena. Zure lana, hura aurkitzea. Eta behin aurkituta, \n\n
+
+uki ezazu!
+</string>
+
+
 
     <string name="title_activity_video">VideoActivity</string>
     <string name="dummy_button">Dummy Button</string>

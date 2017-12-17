@@ -43,14 +43,12 @@ public class Pista2Activity extends Activity {
         setContentView(R.layout.activity_pista2);
         prefs = getSharedPreferences("configs", Context.MODE_PRIVATE);
 
-        texto = (EditText) findViewById(R.id.textoPista);
+       texto = (EditText) findViewById(R.id.textoPista);
        Button btnPistaDos =(Button)findViewById(R.id.btnPstDos);
-        Button btnPistaNormal =(Button)findViewById(R.id.btnEnviar);
+       Button btnPistaNormal =(Button)findViewById(R.id.btnEnviar);
 
         pista = SaberPista();
         if (pista == 1) {
-
-
             btnPistaDos.setVisibility(View.VISIBLE);
             btnPistaNormal.setVisibility(View.INVISIBLE);
             texto.setVisibility(View.INVISIBLE);
@@ -64,7 +62,8 @@ public class Pista2Activity extends Activity {
         }
 
         OcultarTexto();
-        EscribirPista();
+
+            EscribirPista();
 
 
     }
@@ -190,7 +189,7 @@ public class Pista2Activity extends Activity {
         SaberPista();
         pistaTexto = (TextView) findViewById(R.id.txtPista);//quizás falta comprobar que el int que devulve la pista no sobrepasa los limites ya que si eso asi rompreá
         try {
-            pistaTexto.setText(lineas.get(pista));
+            pistaTexto.setText(R.string.enigma1);
         } catch (Exception e) {
             Log.e("Pistas", "Ya no hay mas pistas");
         }
