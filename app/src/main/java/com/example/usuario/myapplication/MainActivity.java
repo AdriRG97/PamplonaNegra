@@ -1,6 +1,7 @@
 package com.example.usuario.myapplication;
 
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +9,7 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -68,7 +70,7 @@ public class MainActivity extends Activity {
 // Aplicamos el tamaño de fuente
         siguiente.setTextSize(18);
         next.setTextSize(18);
-        conf.setTextSize(16);
+        conf.setTextSize(18);
 
         siguiente.setOnClickListener(new View.OnClickListener() {
 
@@ -123,6 +125,7 @@ public class MainActivity extends Activity {
         if (prefs.getBoolean("euskera", true) == true) {
             TextView tv = (TextView) findViewById(R.id.btnAjustes);
             tv.setText(R.string.eus_ajustesMayus);
+            conf.setTextSize(12);
             tv = (TextView) findViewById(R.id.button);
             tv.setText(R.string.eus_jugarMayus);
             tv = (TextView) findViewById(R.id.button2);

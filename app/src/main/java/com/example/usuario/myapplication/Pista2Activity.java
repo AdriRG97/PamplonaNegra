@@ -44,7 +44,6 @@ public class Pista2Activity extends Activity {
 
         videoView = (VideoView) findViewById(R.id.videoPrueba);
         texto = (EditText) findViewById(R.id.textoPista);
-        prefs = getSharedPreferences("pistas", Context.MODE_PRIVATE);
        Button btnPistaDos =(Button)findViewById(R.id.btnPstDos);
         Button btnPistaNormal =(Button)findViewById(R.id.btnEnviar);
 
@@ -229,22 +228,5 @@ public class Pista2Activity extends Activity {
         finish();
     }
 
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (event.getAction() == KeyEvent.ACTION_DOWN) {
 
-            switch (keyCode) {
-                case KeyEvent.KEYCODE_BACK:
-
-                   if(prefs.getInt("pista", 0)==1){
-
-                   }else{
-                       onBackPressed();
-                   }
-
-
-            }            return true;
-        }
-
-        return super.onKeyDown(keyCode, event);
-    }
 }

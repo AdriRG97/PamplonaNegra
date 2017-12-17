@@ -194,6 +194,8 @@ public class InfoActivity extends Activity {
     private ImageView miImagen;
     private TextView lblInfo, lblElige;
 
+    private  String[] elementos = new String[]{"Elige", "Cómo jugar", "Ver nuestra web", "Créditos"};
+
     public SharedPreferences prefs;
     @Override
     public void onPause() {
@@ -210,7 +212,7 @@ public class InfoActivity extends Activity {
         if (prefs.getBoolean("sonido", true) == true) {
             reproducirCancion();
         }
-        comprobarIdioma();
+
     }
 
     @Override
@@ -218,6 +220,7 @@ public class InfoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info_activity);
         // Seteamos en una Variable donde tenemos la fuente (podemos omitir este paso y ponerla directamente cuando cargamos la fuente)
+
         String carpetaFuente = "fonts/lon.ttf";
 
         lblElige = (TextView) findViewById(R.id.lblElige);
@@ -245,14 +248,15 @@ public class InfoActivity extends Activity {
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
         // Initializing a String Array
-        String[] elementos = new String[]{"Elige", "Cómo jugar", "Ver nuestra web", "Créditos"};
 
+        comprobarIdioma();
+        //elementos[0] = "Aukeratu";
         final List<String> listaElementos = new ArrayList<>(Arrays.asList(elementos));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id) {
-// SI SELECCIONA "CÓMO JUGAR" ABRIMOS EL HTML LOCAL CON EL TUTORIAL TODO: FALTAN HACER EL HTML BIEN
+// SI SELECCIONA "CÓMO JUGAR" ABRIMOS EL HTML LOCAL CON EL TUTORIAL TODO: FALTA HACER EL HTML BIEN
                 if (pos == 0) {
                     adapterView.getSelectedView().setEnabled(false);
 
@@ -365,6 +369,11 @@ public class InfoActivity extends Activity {
             tv = (TextView) findViewById(R.id.lblElige);
             tv.setText(R.string.eus_elige);
             lblElige.setTextSize(20);
+
+            elementos[0] = "Aukeratu";
+            elementos[1] = "Nola jolastu?";
+            elementos[2] = "Ikusi gure web orrialde";
+            elementos[3] = "Kredituak";
         } else {
             TextView tv = (TextView) findViewById(R.id.lblInfo);
             tv.setText(R.string.infoMayus);
