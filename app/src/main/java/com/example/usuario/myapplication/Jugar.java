@@ -36,7 +36,7 @@ import java.io.InputStreamReader;
 public class Jugar extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private Marker marcador;
+
     double lat = 0.0;
     double lng = 0.0;
     int pista;
@@ -120,7 +120,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         if (ConocerPista() != -1) {
 //            Toast.makeText(this, "Ya has terminado el juego!", Toast.LENGTH_SHORT).show();
             actualizarUbicacion(miUbicacion());
-            agregarMarcador(saberSitio().latitude, saberSitio().longitude);
+
         }
     }
 
@@ -137,24 +137,13 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
         }
     }
 
-    private void agregarMarcador(double lat, double lng) {
-        LatLng coordenadas = new LatLng(lat, lng);
-        CameraUpdate miUbicacion = CameraUpdateFactory.newLatLngZoom(coordenadas, 16);
-        if (marcador != null) marcador.remove();
-        marcador = mMap.addMarker(new MarkerOptions()
-                .position(coordenadas)
-                .title("Mi posición Actual"));
-        //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ekis)));
 
-        mMap.animateCamera(miUbicacion);
-
-    }
 
     private void actualizarUbicacion(Location location) {
         if (location != null) {
             lat = location.getLatitude();
             lng = location.getLongitude();
-            agregarMarcador(lat, lng);
+
         }
     }
 
