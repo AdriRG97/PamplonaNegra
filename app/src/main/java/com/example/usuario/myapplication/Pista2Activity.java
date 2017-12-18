@@ -61,7 +61,7 @@ public class Pista2Activity extends Activity {
             texto.setEnabled(true);
         }
 
-//        OcultarTexto();
+        OcultarTexto();
 
             EscribirPista();
 
@@ -73,7 +73,7 @@ public class Pista2Activity extends Activity {
         return prefs.getInt("avance", 0);
     }
 
-  /*  private void OcultarTexto() {
+    private void OcultarTexto() {
         //lo he puesto para poder resolver pista sin estar en los lugares.
         if (SaberAvance() > 0) {
 
@@ -85,7 +85,7 @@ public class Pista2Activity extends Activity {
             texto.setVisibility(View.INVISIBLE);
 
         }
-}    */
+    }
 
     private void CambiarPista() {
         int pistaAux = prefs.getInt("pista", 0);
@@ -189,33 +189,33 @@ public class Pista2Activity extends Activity {
         SaberPista();
         pistaTexto = (TextView) findViewById(R.id.txtPista);//quizás falta comprobar que el int que devulve la pista no sobrepasa los limites ya que si eso asi rompreá
         try {
-            switch (prefs.getInt("pista", 0)) {
+            switch (SaberPista()) {
                 case 0:
-                    if(!prefs.getBoolean("euskera", false)){
+                    if(prefs.getBoolean("euskera", false) == false){
                         pistaTexto.setText(R.string.enigma1);
                     }else {
                         pistaTexto.setText(R.string.enigma1_eus);
                     }
                     break;
-                case 1:  if(!prefs.getBoolean("euskera", false)){
+                case 1:  if(prefs.getBoolean("euskera", false) == false){
                     pistaTexto.setText(R.string.enigma2);
                 }else {
                     pistaTexto.setText(R.string.enigma2_eus);
                 }
                     break;
-                case 2: if(!prefs.getBoolean("euskera", false)){
+                case 2: if(prefs.getBoolean("euskera", false) == false){
                     pistaTexto.setText(R.string.enigma3);
                 }else {
                     pistaTexto.setText(R.string.enigma3_eus);
                 }
                     break;
-                case 3:  if(!prefs.getBoolean("euskera", false)){
+                case 3:  if(prefs.getBoolean("euskera", false) == false){
                     pistaTexto.setText(R.string.enigma4);
                 }else {
                     pistaTexto.setText(R.string.enigma4_eus);
                 }
                     break;
-                case 4: if(!prefs.getBoolean("euskera", false)){
+                case 4: if(prefs.getBoolean("euskera", false) == false){
                     pistaTexto.setText(R.string.enigma5);
                 }else {
                     pistaTexto.setText(R.string.enigma5_eus);
@@ -224,7 +224,6 @@ public class Pista2Activity extends Activity {
                 default:
 
         }
-//            pistaTexto.setText(R.string.enigma1);
 
         } catch (Exception e) {
             Log.e("Pistas", "Ya no hay mas pistas");

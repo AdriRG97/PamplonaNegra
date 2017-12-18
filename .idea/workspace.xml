@@ -32,7 +32,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista2Activity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista2Activity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/raw/sitios.txt" afterPath="$PROJECT_DIR$/app/src/main/res/raw/sitios.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <ignored path="PamplonaNegra.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,97 +72,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="68" column="57" lean-forward="false" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideoActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1912">
-              <caret line="113" column="109" lean-forward="false" selection-start-line="113" selection-start-column="109" selection-end-line="113" selection-end-column="109" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1510#2286#0" expanded="true" />
-                <element signature="e#2285#2286#0" expanded="true" />
-                <element signature="e#2370#2686#0" expanded="true" />
-                <element signature="e#2685#2686#0" expanded="true" />
-                <element signature="e#2761#2859#0" expanded="true" />
-                <element signature="e#2858#2859#0" expanded="true" />
-                <element signature="e#3141#3394#0" expanded="true" />
-                <element signature="e#3393#3394#0" expanded="true" />
-                <marker date="1513538009690" expanded="true" signature="4470:4587" ph="(mp) → {" />
-                <marker date="1513538009690" expanded="true" signature="4729:4744" ph="}" />
-                <marker date="1513538009690" expanded="false" signature="4869:4981" ph="(view) → { " />
-                <marker date="1513538009690" expanded="false" signature="4990:5014" ph=" }" />
-                <marker date="1513538009690" expanded="true" signature="5026:5296" ph="//..." />
-                <marker date="1513538009690" expanded="true" signature="5334:5454" ph="{...}" />
-                <marker date="1513538009690" expanded="true" signature="5528:5775" ph="{...}" />
-                <marker date="1513538009690" expanded="true" signature="5587:5743" ph="//..." />
-                <marker date="1513538009690" expanded="true" signature="5803:5901" ph="{...}" />
-                <marker date="1513538009690" expanded="true" signature="5927:6372" ph="{...}" />
-                <marker date="1513538009690" expanded="true" signature="6430:6838" ph="{...}" />
-                <marker date="1513538009690" expanded="true" signature="6844:6961" ph="/**...*/" />
-                <marker date="1513538009690" expanded="true" signature="7008:7130" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AudioService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/AudioService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jugar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Jugar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_pista2.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pista2.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="1547">
-              <caret line="91" column="18" lean-forward="false" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
-              <folding>
-                <element signature="e#2085#2103#0" expanded="true" />
-                <element signature="e#2793#2811#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Pista2Activity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista2Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="834">
-              <caret line="214" column="61" lean-forward="false" selection-start-line="214" selection-start-column="61" selection-end-line="214" selection-end-column="61" />
+            <state relative-caret-position="195">
+              <caret line="75" column="23" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="23" />
               <folding>
                 <element signature="e#1893#1894#0" expanded="true" />
                 <element signature="e#1941#1942#0" expanded="true" />
@@ -167,17 +84,28 @@
                 <element signature="e#3462#3476#0" expanded="true" />
                 <element signature="e#3709#3730#0" expanded="true" />
                 <element signature="e#4811#4819#0" expanded="true" />
-                <element signature="e#5682#5698#0" expanded="true" />
-                <element signature="e#5772#5792#0" expanded="true" />
-                <element signature="e#5948#5964#0" expanded="true" />
-                <element signature="e#6030#6050#0" expanded="true" />
-                <element signature="e#6201#6217#0" expanded="true" />
-                <element signature="e#6283#6303#0" expanded="true" />
-                <element signature="e#6455#6471#0" expanded="true" />
-                <element signature="e#6537#6557#0" expanded="true" />
-                <element signature="e#6708#6724#0" expanded="true" />
-                <element signature="e#6790#6810#0" expanded="true" />
-                <element signature="e#6925#6941#0" expanded="true" />
+                <element signature="e#5679#5695#0" expanded="true" />
+                <element signature="e#5769#5789#0" expanded="true" />
+                <element signature="e#5954#5970#0" expanded="true" />
+                <element signature="e#6036#6056#0" expanded="true" />
+                <element signature="e#6216#6232#0" expanded="true" />
+                <element signature="e#6298#6318#0" expanded="true" />
+                <element signature="e#6479#6495#0" expanded="true" />
+                <element signature="e#6561#6581#0" expanded="true" />
+                <element signature="e#6741#6757#0" expanded="true" />
+                <element signature="e#6823#6843#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pista3ctivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista3ctivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,11 +121,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pista.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/pista.txt">
+      <file leaf-file-name="VideoActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="53" column="95" lean-forward="false" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="95" />
+            <state relative-caret-position="219">
+              <caret line="158" column="64" lean-forward="false" selection-start-line="158" selection-start-column="64" selection-end-line="158" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_pista2.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pista2.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+              <folding>
+                <marker date="1513554622854" expanded="true" signature="3074:3077" ph="..." />
+              </folding>
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_jugar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_jugar.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="70" column="29" lean-forward="false" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sitios.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/sitios.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -206,8 +174,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="129" column="29" lean-forward="false" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+            <state relative-caret-position="-510">
+              <caret line="42" column="39" lean-forward="false" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -224,28 +192,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>==</find>
-      <find>pista</find>
-      <find>!=</find>
-      <find>commi</find>
-      <find>editor.putInt(&quot;pista&quot;, 1);</find>
-      <find>ver nuestra</find>
-      <find>elemento</find>
-      <find>Cómo</find>
-      <find>comprob</find>
-      <find>eus</find>
-      <find>size</find>
-      <find>nola</find>
-      <find>lay</find>
       <find>layo</find>
       <find>layout</find>
       <find>eusk</find>
       <find>inten</find>
-      <find>prefs</find>
-      <find>intent</find>
       <find>resu</find>
       <find>video1</find>
-      <find>escribir</find>
       <find>lineas.g</find>
       <find>anteayer</find>
       <find>si quiere</find>
@@ -254,9 +206,25 @@
       <find>si quiere lib</find>
       <find>STRING.</find>
       <find>belzunc</find>
+      <find>prefs</find>
+      <find>prefs =</find>
+      <find>pistas</find>
+      <find>switc</find>
+      <find>&quot;pista&quot;</find>
+      <find>prefs.getInt(&quot;pista&quot;, 0)</find>
+      <find>escribir</find>
+      <find>switch</find>
+      <find>pista</find>
+      <find>pista&quot;</find>
+      <find>intent</find>
+      <find>swit</find>
+      <find>prefs.</find>
+      <find>resolver</find>
+      <find>swi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -2008,9 +1976,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/raw/pista.txt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pista2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/raw/sitios.txt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista2Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/raw/sitios.txt" />
       </list>
     </option>
   </component>
@@ -2062,20 +2030,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="drawable" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="PamplonaNegra">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2254,6 +2208,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PamplonaNegra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PamplonaNegra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2335,6 +2319,20 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PamplonaNegra">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2350,15 +2348,15 @@
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\USUARIO\Documents\GitHub\PamplonaNegra\app\src\main\res\raw" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Documents\GitHub\PamplonaNegra\app\src\main\assets\fonts" />
+      <recent name="C:\Users\USUARIO\Documents\GitHub\PamplonaNegra\app\src\main\res\drawable" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.example.usuario.myapplication" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\USUARIO\Documents\GitHub\PamplonaNegra\app\src\main\assets\fonts" />
-      <recent name="C:\Users\USUARIO\Documents\GitHub\PamplonaNegra\app\src\main\res\drawable" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Documents\GitHub\PamplonaNegra\app\src\main\res\raw" />
     </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -2375,13 +2373,10 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Configuraciones.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/InfoActivity.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Jugar.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista2Activity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista3ctivity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/layout/activity_pista2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/values/strings.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -2560,7 +2555,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513538713309" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513556963779" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2608,7 +2603,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513538713309" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513556963779" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2791,7 +2786,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513538713310" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513556963780" />
       </method>
     </configuration>
     <list size="1">
@@ -3012,7 +3007,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513537990838</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="App Beta 17/12/17 4. Nuevos Strings ya aparecen">
+      <created>1513538811639</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1513538811639</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3026,10 +3028,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2583519" sideWeight="0.53731346" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2583519" sideWeight="0.5415778" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2583519" sideWeight="0.46268657" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.93174064" sideWeight="0.60152674" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2583519" sideWeight="0.45842218" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.4978678" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3041,8 +3043,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34743875" sideWeight="0.5181237" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34743875" sideWeight="0.5826226" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3146,7 +3148,8 @@
     <MESSAGE value="App Beta 17/12/17" />
     <MESSAGE value="App Beta 17/12/17 2 (Vídeos actualizados)" />
     <MESSAGE value="App Beta 17/12/17 3 Strings actualizados" />
-    <option name="LAST_COMMIT_MESSAGE" value="App Beta 17/12/17 3 Strings actualizados" />
+    <MESSAGE value="App Beta 17/12/17 4. Nuevos Strings ya aparecen" />
+    <option name="LAST_COMMIT_MESSAGE" value="App Beta 17/12/17 4. Nuevos Strings ya aparecen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3169,29 +3172,16 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="68" />
+      <option name="time" value="72" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
-        <watch expression="lineas.get(pista)" />
-        <watch expression="coordenadas" />
-        <watch expression="prefs.getBoolean(&quot;sonido&quot;, true)" />
-        <watch expression="prefs.getBoolean(&quot;sonido&quot;, true) == true" />
-        <watch expression="prefs.getBoolean(&quot;sonido&quot;, true)" />
-        <watch expression="(prefs.getInt(&quot;pista&quot;, 0)" />
-        <watch expression="elementos[0]" />
+        <watch expression="prefs.getInt(&quot;pista&quot;, 0)" />
+        <watch expression="pistaAux" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-402">
@@ -3250,7 +3240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="1676" column="16" lean-forward="false" selection-start-line="1676" selection-start-column="16" selection-end-line="1676" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3333,7 +3322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="282" column="0" lean-forward="false" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3341,35 +3329,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="4898" column="0" lean-forward="false" selection-start-line="4898" selection-start-column="0" selection-end-line="4898" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/app/Instrumentation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="1134" column="0" lean-forward="false" selection-start-line="1134" selection-start-column="0" selection-end-line="1134" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/os/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_jugar.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="19" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/view/KeyEvent.java">
@@ -3402,16 +3362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista3ctivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_items.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3421,98 +3371,6 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/content/ContextWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/app/SharedPreferencesImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="260" column="0" lean-forward="false" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="2350" column="0" lean-forward="false" selection-start-line="2350" selection-start-column="0" selection-end-line="2350" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/widget/TextView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="4589" column="0" lean-forward="false" selection-start-line="4589" selection-start-column="0" selection-end-line="4589" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/os/Looper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="148" column="27" lean-forward="false" selection-start-line="148" selection-start-column="27" selection-end-line="148" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/app/ActivityThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="2759" column="0" lean-forward="false" selection-start-line="2759" selection-start-column="0" selection-end-line="2759" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="13320" column="16" lean-forward="false" selection-start-line="13320" selection-start-column="16" selection-end-line="13320" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/InfoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="198" column="34" lean-forward="false" selection-start-line="198" selection-start-column="29" selection-end-line="198" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1513532394943" expanded="true" signature="12760:13550" ph="{...}" />
-            <marker date="1513532394943" expanded="true" signature="12931:12953" ph="&quot;INFORMAZIOA&quot;" />
-            <marker date="1513532394943" expanded="true" signature="13036:13054" ph="&quot;Aukeratu:&quot;" />
-            <marker date="1513532394943" expanded="false" signature="13378:13396" ph="&quot;INFORMACIÓN&quot;" />
-            <marker date="1513532394943" expanded="false" signature="13479:13493" ph="&quot;Elige:&quot;" />
-            <marker date="1513532394943" expanded="true" signature="13587:13726" ph="{...}" />
-            <marker date="1513532394943" expanded="true" signature="13759:13898" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="51" column="29" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1513538009421" expanded="true" signature="4012:4805" ph="{...}" />
-            <marker date="1513538009421" expanded="false" signature="4186:4211" ph="&quot;KONFIGURAZIOA&quot;" />
-            <marker date="1513538009421" expanded="false" signature="4326:4349" ph="&quot;JOLASTEA&quot;" />
-            <marker date="1513538009421" expanded="false" signature="4431:4453" ph="&quot;INFORMAZIOA&quot;" />
-            <marker date="1513538009421" expanded="false" signature="4565:4586" ph="&quot;AJUSTES&quot;" />
-            <marker date="1513538009421" expanded="false" signature="4667:4686" ph="&quot;JUGAR&quot;" />
-            <marker date="1513538009421" expanded="false" signature="4768:4786" ph="&quot;INFORMACIÓN&quot;" />
-            <marker date="1513538009421" expanded="true" signature="4841:4980" ph="{...}" />
-            <marker date="1513538009421" expanded="true" signature="5013:5152" ph="{...}" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
@@ -3542,9 +3400,17 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/pista.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="53" column="95" lean-forward="false" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="1156">
           <caret line="68" column="57" lean-forward="false" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="57" />
           <folding />
         </state>
@@ -3553,49 +3419,21 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1912">
-          <caret line="113" column="109" lean-forward="false" selection-start-line="113" selection-start-column="109" selection-end-line="113" selection-end-column="109" />
+        <state relative-caret-position="168">
+          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1510#2286#0" expanded="true" />
-            <element signature="e#2285#2286#0" expanded="true" />
-            <element signature="e#2370#2686#0" expanded="true" />
-            <element signature="e#2685#2686#0" expanded="true" />
-            <element signature="e#2761#2859#0" expanded="true" />
-            <element signature="e#2858#2859#0" expanded="true" />
-            <element signature="e#3141#3394#0" expanded="true" />
-            <element signature="e#3393#3394#0" expanded="true" />
-            <marker date="1513538009690" expanded="true" signature="4470:4587" ph="(mp) → {" />
-            <marker date="1513538009690" expanded="true" signature="4729:4744" ph="}" />
-            <marker date="1513538009690" expanded="false" signature="4869:4981" ph="(view) → { " />
-            <marker date="1513538009690" expanded="false" signature="4990:5014" ph=" }" />
-            <marker date="1513538009690" expanded="true" signature="5026:5296" ph="//..." />
-            <marker date="1513538009690" expanded="true" signature="5334:5454" ph="{...}" />
-            <marker date="1513538009690" expanded="true" signature="5528:5775" ph="{...}" />
-            <marker date="1513538009690" expanded="true" signature="5587:5743" ph="//..." />
-            <marker date="1513538009690" expanded="true" signature="5803:5901" ph="{...}" />
-            <marker date="1513538009690" expanded="true" signature="5927:6372" ph="{...}" />
-            <marker date="1513538009690" expanded="true" signature="6430:6838" ph="{...}" />
-            <marker date="1513538009690" expanded="true" signature="6844:6961" ph="/**...*/" />
-            <marker date="1513538009690" expanded="true" signature="7008:7130" ph="{...}" />
+            <marker date="1513538009421" expanded="true" signature="4012:4805" ph="{...}" />
+            <marker date="1513538009421" expanded="false" signature="4186:4211" ph="&quot;KONFIGURAZIOA&quot;" />
+            <marker date="1513538009421" expanded="false" signature="4326:4349" ph="&quot;JOLASTEA&quot;" />
+            <marker date="1513538009421" expanded="false" signature="4431:4453" ph="&quot;INFORMAZIOA&quot;" />
+            <marker date="1513538009421" expanded="false" signature="4565:4586" ph="&quot;AJUSTES&quot;" />
+            <marker date="1513538009421" expanded="false" signature="4667:4686" ph="&quot;JUGAR&quot;" />
+            <marker date="1513538009421" expanded="false" signature="4768:4786" ph="&quot;INFORMACIÓN&quot;" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pista2.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="18" lean-forward="false" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
-          <folding>
-            <element signature="e#2085#2103#0" expanded="true" />
-            <element signature="e#2793#2811#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/AudioService.java">
@@ -3603,26 +3441,117 @@
         <state relative-caret-position="470">
           <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2080#2081#0" expanded="false" />
+            <element signature="e#2122#2123#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/sitios.txt">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/content/ContextWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="22" />
+        <state relative-caret-position="186">
+          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/view/ContextThemeWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding>
+            <element signature="e#4276#4277#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="8107" column="0" lean-forward="false" selection-start-line="8107" selection-start-column="0" selection-end-line="8107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/InfoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="342" column="24" lean-forward="false" selection-start-line="342" selection-start-column="24" selection-end-line="342" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1513532394943" expanded="true" signature="12760:13550" ph="{...}" />
+            <marker date="1513532394943" expanded="true" signature="12931:12953" ph="&quot;INFORMAZIOA&quot;" />
+            <marker date="1513532394943" expanded="true" signature="13036:13054" ph="&quot;Aukeratu:&quot;" />
+            <marker date="1513532394943" expanded="false" signature="13378:13396" ph="&quot;INFORMACIÓN&quot;" />
+            <marker date="1513532394943" expanded="false" signature="13479:13493" ph="&quot;Elige:&quot;" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Jugar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="56" column="67" lean-forward="false" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/widget/TextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="4590" column="0" lean-forward="false" selection-start-line="4590" selection-start-column="0" selection-end-line="4590" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/app/SharedPreferencesImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="260" column="0" lean-forward="false" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/os/Looper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="6743" column="0" lean-forward="false" selection-start-line="6743" selection-start-column="0" selection-end-line="6743" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/app/Instrumentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="1134" column="0" lean-forward="false" selection-start-line="1134" selection-start-column="0" selection-end-line="1134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="2847" column="0" lean-forward="false" selection-start-line="2847" selection-start-column="0" selection-end-line="2847" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3634,26 +3563,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/pista.txt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista3ctivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="53" column="95" lean-forward="false" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="95" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/VideoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="158" column="64" lean-forward="false" selection-start-line="158" selection-start-column="64" selection-end-line="158" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="129" column="29" lean-forward="false" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+        <state relative-caret-position="-510">
+          <caret line="42" column="39" lean-forward="false" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_jugar.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="70" column="29" lean-forward="false" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pista2.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding>
+            <marker date="1513554622854" expanded="true" signature="3074:3077" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/sitios.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/usuario/myapplication/Pista2Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="214" column="61" lean-forward="false" selection-start-line="214" selection-start-column="61" selection-end-line="214" selection-end-column="61" />
+        <state relative-caret-position="195">
+          <caret line="75" column="23" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="23" />
           <folding>
             <element signature="e#1893#1894#0" expanded="true" />
             <element signature="e#1941#1942#0" expanded="true" />
@@ -3661,17 +3634,16 @@
             <element signature="e#3462#3476#0" expanded="true" />
             <element signature="e#3709#3730#0" expanded="true" />
             <element signature="e#4811#4819#0" expanded="true" />
-            <element signature="e#5682#5698#0" expanded="true" />
-            <element signature="e#5772#5792#0" expanded="true" />
-            <element signature="e#5948#5964#0" expanded="true" />
-            <element signature="e#6030#6050#0" expanded="true" />
-            <element signature="e#6201#6217#0" expanded="true" />
-            <element signature="e#6283#6303#0" expanded="true" />
-            <element signature="e#6455#6471#0" expanded="true" />
-            <element signature="e#6537#6557#0" expanded="true" />
-            <element signature="e#6708#6724#0" expanded="true" />
-            <element signature="e#6790#6810#0" expanded="true" />
-            <element signature="e#6925#6941#0" expanded="true" />
+            <element signature="e#5679#5695#0" expanded="true" />
+            <element signature="e#5769#5789#0" expanded="true" />
+            <element signature="e#5954#5970#0" expanded="true" />
+            <element signature="e#6036#6056#0" expanded="true" />
+            <element signature="e#6216#6232#0" expanded="true" />
+            <element signature="e#6298#6318#0" expanded="true" />
+            <element signature="e#6479#6495#0" expanded="true" />
+            <element signature="e#6561#6581#0" expanded="true" />
+            <element signature="e#6741#6757#0" expanded="true" />
+            <element signature="e#6823#6843#0" expanded="true" />
           </folding>
         </state>
       </provider>
